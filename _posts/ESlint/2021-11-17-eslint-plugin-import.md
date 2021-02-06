@@ -145,13 +145,11 @@ var path = require("path");
 
 ## Options
 
-This rule supports the following options:
+이 규칙들은 아래의 옵션들을 지원합니다:
 
 ### `groups: [array]`:
 
-How groups are defined, and the order to respect. `groups` must be an array of `string` or [`string`]. The only allowed `string`s are:
-`"builtin"`, `"external"`, `"internal"`, `"unknown"`, `"parent"`, `"sibling"`, `"index"`, `"object"`, `"type"`.
-The enforced order is the same as the order of each element in a group. Omitted types are implicitly grouped together as the last element. Example:
+어떻게 그룹을 정의하고 순서를 정하는지 알아보십다. `groups`은 반드시 `string(문자열)` 혹은 [`string`]이여야 합니다. 유일하게 허용되는 `string`은 다음과 같습니다. `"builtin(내장)"`, `"external(외부)"`, `"internal(내부)"`, `"unknown(알수없음)"`, `"parent(부모)"`, `"sibling(형제)"`, `"index(인덱스)"`, `"object(객체)"`, `"type(타입)"`. 적용되는 순서는 그룹의 각 element와 동일합니다. 생략된 유형은 마지막 요소로 함께 그룹화됩니다.
 
 ```js
 [
