@@ -153,11 +153,11 @@ var path = require("path");
 
 ```js
 [
-  "builtin", // Built-in types are first
-  ["sibling", "parent"], // Then sibling and parent types. They can be mingled together
-  "index", // Then the index file
+  "builtin", // 내장 유형이 첫번째입니다.
+  ["sibling", "parent"], // 그런 다음 형제 및 부모 유형이 옵니다. 해당 유형들은 섞일 수 있습니다
+  "index", // 그런 다음 인덱스 파일
   "object",
-  // Then the rest: internal and external type
+  // 그런 다음 나머지: 내부 및 외부 유형
 ];
 ```
 
