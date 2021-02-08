@@ -161,9 +161,9 @@ var path = require("path");
 ];
 ```
 
-The default value is `["builtin", "external", "parent", "sibling", "index"]`.
+기본 값은 `["builtin", "external", "parent", "sibling", "index"]` 입니다.
 
-You can set the options like this:
+다음과 같이 옵션 설정을 할 수도 있습니다:
 
 ```js
 "import/order": ["error", {"groups": ["index", "sibling", "parent", "internal", "external", "builtin", "object", "type"]}]
