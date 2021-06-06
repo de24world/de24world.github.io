@@ -9,10 +9,21 @@
 * 개발자들이 코드를 계속 작성하면, 사용자 및 내부 사용자들 (즉, QA 등등)이 계속 쓸 수 있게 만드는 것. 즉, **지속적으로 배포가능한 상태를 유지**하는 것
 
 # 3. Jenkins 란
-* (무료 오픈소스, 설치형)
+<img src="/KR/Guidebook/Jenkins/jenkins_pipeline2.png" alt="jenkins_pipeline2" title="jenkins_pipeline2"></img>
+
+* CI Tools (무료 오픈소스, 설치형) / 빌드, 테스트, 정적 분석을 자동으로 실행 해줌
+
+* 젠킨스 이전? : build, test 명령어를 수동으로 터미널에서 입력
+<img src="/KR/Guidebook/Jenkins/before_jenkins.png" alt="before_jenkins" title="before_jenkins"></img>
+
+* 젠킨스 이후? : 일일이 build, test 명령어를 입력하지 않아도 코드만 commit 해서 push 하면 자동적으로 실행
+<img src="/KR/Guidebook/Jenkins/after_jenkins.png" alt="after_jenkins" title="after_jenkins"></img>
+
+아키텍처
+<img src="/KR/Guidebook/Jenkins/architecture.png" alt="architecture" title="architecture"></img>
+
 
 <img src="/KR/Guidebook/Jenkins/jenkins_pipeline.png" alt="jenkins_pipeline" title="jenkins_pipeline"></img>
-<img src="/KR/Guidebook/Jenkins/jenkins_pipeline2.png" alt="jenkins_pipeline2" title="jenkins_pipeline2"></img>
 
 ****
 # 4. 그 외
@@ -23,6 +34,8 @@
 
 ## ○ 참고 영상
 * [CI/CD가 뭔가요? (Feat. 젠킨스, Travis CI, Github Actions)](https://youtu.be/UbI0Q_9epDM)
+* [빌드(Build)를 위한 Jenkins 설치 및 설정하기](https://youtu.be/m0tky1jyP-0)
+
 
 ## ○ 참조 문서 및 사이트
 * [CI/CD가 뭔가요? | 얄코](https://www.yalco.kr/43_ci_cd/) 
