@@ -19,7 +19,7 @@
 * 젠킨스 이후? : 일일이 build, test 명령어를 입력하지 않아도 코드만 commit 해서 push 하면 자동적으로 실행   
 <img src="/KR/Guidebook/Jenkins/after_jenkins.png" width="450px" alt="after_jenkins" title="after_jenkins"></img>
 
-아키텍처   
+* 아키텍처   
 <img src="/KR/Guidebook/Jenkins/architecture.png" width="450px" alt="architecture" title="architecture"></img>
 
 ***
@@ -44,14 +44,14 @@
 
  ### 3.3.2 Source Code Management (소스 코드 관리)
  Repositories 설정 (URL, 인증)을 할 수 있으며, 어떤 Branches 들을 build 할 것인지 설정할 수 있다.   
-public 레포지토리는 credentials(인증) 설정할 필요가 없으나, private 레포지토리는 git 과 연동하여 설정해야한다.
+ public 레포지토리는 credentials(인증) 설정할 필요가 없으나, private 레포지토리는 git 과 연동하여 설정해야한다.
 
  ###  3.3.3 Build Triggers (빌드 유발)
 빌드를 언제 실행할 지를 설정할 수 있다.   
-    **Trigger builds remotely (e.g., from scripts) 빌드를 원격으로 유발** : 외부에서 URL을 통해 빌드를 진행 할 수 있도록 설정합니다.   
-    **Build after other project are built** : 다른 프로젝트를 빌드한 후 이어서 현재 프로젝트를 빌드하는 설정.    
-    **Build periodically** : 주기적으로 빌드   
-    **Poll SCM** : 서버에서 변경된 사항이 존재할 때 빌드를 수행하는 설정     
+    - Trigger builds remotely (e.g., from scripts) 빌드를 원격으로 유발 : 외부에서 URL을 통해 빌드를 진행 할 수 있도록 설정합니다.   
+    - Build after other project are built : 다른 프로젝트를 빌드한 후 이어서 현재 프로젝트를 빌드하는 설정.    
+    - Build periodically** : 주기적으로 빌드   
+    - Poll SCM** : 서버에서 변경된 사항이 존재할 때 빌드를 수행하는 설정     
 
         ```
         schedule 예시
@@ -66,12 +66,26 @@ public 레포지토리는 credentials(인증) 설정할 필요가 없으나, pri
         ```
 
 
- ### 3.3.4 Build Environment
+ ### 3.3.4 Build Environment (빌드 환경)
+ 빌드 환경 설정
+    - Delete workspace before build start : 빌드를 실행하기 전, 이전에 사용되던 작업 공간 삭제 
+    - Use secret text(s) or file(s) : 다양한 자격 증명에 사용할 인증 파일 또는 텍스트 사용    
+    - Abort the build if it’s struck : 빌드가 교착 상태 등의 이유로 중지되면 지정된 시간 내로 빌드 종료 후 지정된 메시지 출력    
+    - Add timestamps to the Console Output : 빌드 시작 시간, 빌드 종료 시간 등 시간과 관련된 내용을 Console output에 함께 출력  
+    - With Ant : Apache Ant를 사용하여 빌드하는 환경 구성. 
 
- ### 3.3.5 Build 
+ ### 3.3.5 Build (빌드)
+ 명령어 입력 등 다양한 방법으로 빌드 시킬 수 있다.
+    - Execute Windows batch command: 입력된 Window command line 실행
+    - Execute Shell: sh -xe 명령어 실행. Linux 전용.
+    - Invoke Ant: Ant 빌드 시스템을 사용하는 프로젝트의 경우에 사용. 입력된 인자를 통해 빌드
+    - Invoke Gradle script: Gradle를 빌드 시스템으로 빌드하는 프로젝트의 경우에 사용. 입력된 인자를 통해 작업.
+    - Invoke top-level Maven targets: Maven 빌드 시스템으로 빌드하는 프로젝트의 경우에 사용. 입력된 인자를 통해 작업
+    - Run with timeout: 지정된 시간동안 빌드가 완료되지 않으면 빌드 중지
+    - Set build status to “pending” on GitHub commit: Git 프로젝트 속성에 정의된 이름 속성으로 작업 이름을 대체 
 
 ### 3.3.6 Post-build Actions 
-
+빌드 이후 액션을 설정해줄 수 있다. (예, 이메일 알림 등)
 
 ****
 # 4. 그 외
