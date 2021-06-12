@@ -51,7 +51,7 @@
     - Trigger builds remotely (e.g., from scripts) 빌드를 원격으로 유발 : 외부에서 URL을 통해 빌드를 진행 할 수 있도록 설정합니다.   
     - Build after other project are built : 다른 프로젝트를 빌드한 후 이어서 현재 프로젝트를 빌드하는 설정.    
     - Build periodically** : 주기적으로 빌드   
-    - Poll SCM** : 서버에서 변경된 사항이 존재할 때 빌드를 수행하는 설정     
+    - Poll SCM** : 서버에서 변경된 사항이 존재할 때 빌드를 수행하는 설정  (플러그인)   
 
         ```
         schedule 예시
@@ -86,6 +86,16 @@
 
 ### 3.3.6 Post-build Actions (빌드 후 조치)
 빌드 이후 액션을 설정해줄 수 있다. (예, 이메일 알림 혹은 Projects to build : 다른 프로젝트와 파이프라인 설정 등을 할 수 있다.)
+
+
+# 4. Pipeline (파이프라인)
+* 파이프라인이란 Jenkins Job(작업), 즉 빌드/테스트/배포 등을 Job(작업)이라고 부르는데 이를 연속적으로 수행 가능하도록 만들 수 있는 기능을 말한다.
+* 새로운 아이템(New Item)을 클릭하여 새로운 작업을 만들 때, Pipeline을 설정해주면 된다.
+
+<img src="/KR/Guidebook/Jenkins/jenkins_pipeline_script.png" alt="jenkins_pipeline_script" title="jenkins_pipeline_script"></img>
+
+    - Pipeline script : 스크립트로만 파이프라인을 정의한다.
+    - Pipeline script from SCM : 서버에서 변동사항이 있을 때 스크립트 실행(위의 Poll SCM 참조)
 
 ****
 # 4. 그 외
