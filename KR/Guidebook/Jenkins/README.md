@@ -97,7 +97,7 @@
     - Pipeline script from SCM : 서버에서 변동사항이 있을 때 스크립트 실행(위의 Poll SCM 참조)
 
 ****
-# 4. 그 외
+# 5. 그 외
 * Travis CI, Circle CI, Team City 같은 클라우드형 서비스도 있다. (유료형)
 * Github, Bitbucket, Gitlab 등에서 자체적으로 제공도 한다. 예 : Github Action, Gitlab : CI/CD, Bitbucket : Pipelines (일부 서비스 유료)
 * 정적 사이트를 Github를 통해 올리면 바로 자기네 서버에 배포해주는 Netlify나 Vercel 처럼 그 자체가 배포 자동화인 서비스도 있다.

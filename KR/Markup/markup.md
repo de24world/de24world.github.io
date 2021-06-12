@@ -13,6 +13,10 @@ shift + alt(cmd) + v
 
 2. 백스페이스(```) 활용하기
 
+3. 코드 앞에 언어명을 써주면 코드가 해당 언어에 맞게 색상 적용 가능
+
+4. 꼭 문장 끝에는 세칸 띄어쓰기해서 줄 바꿈을 권장
+
 
 참고
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
