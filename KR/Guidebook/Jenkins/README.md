@@ -84,8 +84,8 @@
     - Run with timeout: 지정된 시간동안 빌드가 완료되지 않으면 빌드 중지
     - Set build status to “pending” on GitHub commit: Git 프로젝트 속성에 정의된 이름 속성으로 작업 이름을 대체 
 
-### 3.3.6 Post-build Actions 
-빌드 이후 액션을 설정해줄 수 있다. (예, 이메일 알림 등)
+### 3.3.6 Post-build Actions (빌드 후 조치)
+빌드 이후 액션을 설정해줄 수 있다. (예, 이메일 알림 혹은 Projects to build : 다른 프로젝트와 파이프라인 설정 등을 할 수 있다.)
 
 ****
 # 4. 그 외
