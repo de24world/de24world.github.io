@@ -13,7 +13,7 @@
 <img src="/KR/Guidebook/Jenkins/jenkins_pipeline2.png" alt="jenkins_pipeline2" title="jenkins_pipeline2"></img>
 
 
-* 젠킨스 이전? : build, test 명령어를 수동으로 터미널에서 입력   
+* 젠킨스 이전? : build, test 명령어를 수동으로 터미널에서 입력 (물론 gulp 라는 task runner 등을 통해서 간편하게 할 수 있지만 여러 레지포토리일 때는 에로사항이 많음)
 <img src="/KR/Guidebook/Jenkins/before_jenkins.png" width="450px" alt="before_jenkins" title="before_jenkins"></img>
 
 * 젠킨스 이후? : 일일이 build, test 명령어를 입력하지 않아도 코드만 commit 해서 push 하면 자동적으로 실행   
