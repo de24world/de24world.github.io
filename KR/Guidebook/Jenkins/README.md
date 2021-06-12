@@ -75,14 +75,14 @@
     - With Ant : Apache Ant를 사용하여 빌드하는 환경 구성. 
 
  ### 3.3.5 Build (빌드)
- 명령어 입력 등 다양한 방법으로 빌드 시킬 수 있다.
-    - Execute Windows batch command: 입력된 Window command line 실행
-    - Execute Shell: sh -xe 명령어 실행. Linux 전용.
-    - Invoke Ant: Ant 빌드 시스템을 사용하는 프로젝트의 경우에 사용. 입력된 인자를 통해 빌드
-    - Invoke Gradle script: Gradle를 빌드 시스템으로 빌드하는 프로젝트의 경우에 사용. 입력된 인자를 통해 작업.
-    - Invoke top-level Maven targets: Maven 빌드 시스템으로 빌드하는 프로젝트의 경우에 사용. 입력된 인자를 통해 작업
-    - Run with timeout: 지정된 시간동안 빌드가 완료되지 않으면 빌드 중지
-    - Set build status to “pending” on GitHub commit: Git 프로젝트 속성에 정의된 이름 속성으로 작업 이름을 대체 
+ 명령어 입력 등 다양한 방법으로 빌드 시킬 수 있다.   
+    - Execute Windows batch command: 입력된 Window command line 실행   
+    - Execute Shell: sh -xe 명령어 실행. Linux 전용.   
+    - Invoke Ant: Ant 빌드 시스템을 사용하는 프로젝트의 경우에 사용. 입력된 인자를 통해 빌드   
+    - Invoke Gradle script: Gradle를 빌드 시스템으로 빌드하는 프로젝트의 경우에 사용. 입력된 인자를 통해 작업.   
+    - Invoke top-level Maven targets: Maven 빌드 시스템으로 빌드하는 프로젝트의 경우에 사용. 입력된 인자를 통해 작업   
+    - Run with timeout: 지정된 시간동안 빌드가 완료되지 않으면 빌드 중지   
+    - Set build status to “pending” on GitHub commit: Git 프로젝트 속성에 정의된 이름 속성으로 작업 이름을 대체    
 
 ### 3.3.6 Post-build Actions (빌드 후 조치)
 빌드 이후 액션을 설정해줄 수 있다. (예, 이메일 알림 혹은 Projects to build : 다른 프로젝트와 파이프라인 설정 등을 할 수 있다.)
