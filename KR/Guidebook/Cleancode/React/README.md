@@ -70,6 +70,95 @@ export const ConditionalRenderingGood = () => {
 }
 ```
 
+# 2. Conditional rendering only for one condition<br> (한 가지 조건에서의 조건문)
+* 만약 **false** 값을 반환하지 않고 **true** 값만 반환하고 싶을 때에는 위의 삼항 연산자를 쓰지말고, **&&** 연산자를 쓴다.  
+
+Bad example (나쁜 예시 )
+```jsx
+import React, { useState } from 'react'
+
+export const ConditionalRenderingWhenTrueBad = () => {
+  const [showConditionalText, setShowConditionalText] = useState(false)
+
+  const handleClick = () =>
+    setShowConditionalText(showConditionalText => !showConditionalText)
+
+  return (
+    <div>
+      <button onClick={handleClick}>Toggle the text</button>
+      {showConditionalText ? <p>The condition must be true!</p> : null}
+    </div>
+  )
+}
+```
+
+**Good example (좋은 예시)**
+```jsx
+import React, { useState } from 'react'
+
+export const ConditionalRenderingWhenTrueGood = () => {
+  const [showConditionalText, setShowConditionalText] = useState(false)
+
+  const handleClick = () =>
+    setShowConditionalText(showConditionalText => !showConditionalText)
+
+  return (
+    <div>
+      <button onClick={handleClick}>Toggle the text</button>
+      {showConditionalText && <p>The condition must be true!</p>}
+    </div>
+  )
+}
+```
+
+# 3. Boolean props <br> (불리언=참,거짓 props)
+* 참(true)인 값을 props 로 받고 싶다면 해당 값을 **isHungry={true}** 처럼 true를 굳이 써주지 않아도 된다.
+
+Bad example (나쁜 예시 )
+```jsx
+
+import React from 'react'
+
+const HungryMessage = ({ isHungry }) => (
+  <span>{isHungry ? 'I am hungry' : 'I am full'}</span>
+)
+
+export const BooleanPropBad = () => (
+  <div>
+    <span>
+      <b>This person is hungry: </b>
+    </span>
+    <HungryMessage isHungry={true} />
+    <br />
+    <span>
+      <b>This person is full: </b>
+    </span>
+    <HungryMessage isHungry={false} />
+  </div>
+)
+```
+
+**Good example (좋은 예시)**
+```jsx
+import React, { useState } from 'react'
+
+export const ConditionalRenderingWhenTrueGood = () => {
+  const [showConditionalText, setShowConditionalText] = useState(false)
+
+  const handleClick = () =>
+    setShowConditionalText(showConditionalText => !showConditionalText)
+
+  return (
+    <div>
+      <button onClick={handleClick}>Toggle the text</button>
+      {showConditionalText && <p>The condition must be true!</p>}
+    </div>
+  )
+}
+```
+
+
+<!-- 아래는 복붙 지워야할 것 -->
 ## 2.2 property (속성)
     
 ```html
