@@ -1,7 +1,15 @@
 [리액트 클린코드] 
 ======================
+
+* 읽기 전 참조 문서   
+  - [clean-code-javascript-ko](https://github.com/de24world/clean-code-javascript-ko/edit/master/README.md)
+
 # Clean Code 는?
 * Clean Code 는 단순히 작동하는 것 이상의 것을 말한다. Clean Code는 읽기 쉬워야 하고, 이해하기 쉬어야하고, 깔끔하게 정리되어야 합니다. 
+
+# 0. 시작 전
+* **lint**(eslint,tslint...)와 **formatter**(prettier,beautify...) 를 사용하면 훨씬 쉽게 코드를 clean하게 작성할 수 있다.
+* **class 및 함수** 작성시 [자바스크립트 클린코드](https://github.com/de24world/clean-code-javascript-ko/edit/master/README.md)를 참조 한다.   
 
 # 1. Conditional rendering on either condition <br> (두 가지 조건에서의 경우, 렌더링 조건문=조건부 삼항 연산자)
 * 기존 자바스크립트에서는 **if & else (return...)** 문법을 사용하여 **true 값과 false 값을 반환**을 해주었는데, es6(모던자바스크립트)에서부터 [...?...: 조건부 삼항 연산자](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)로 대체한다
@@ -254,10 +262,9 @@ export const ConditionalRenderingWhenTrueGood = () => {
 빌드 이후 액션을 설정해줄 수 있다. (예, 이메일 알림 등)
 
 ****
-# 4. 그 외
-* Travis CI, Circle CI, Team City 같은 클라우드형 서비스도 있다. (유료형)
-* Github, Bitbucket, Gitlab 등에서 자체적으로 제공도 한다. 예 : Github Action, Gitlab : CI/CD, Bitbucket : Pipelines (일부 서비스 유료)
-* 정적 사이트를 Github를 통해 올리면 바로 자기네 서버에 배포해주는 Netlify나 Vercel 처럼 그 자체가 배포 자동화인 서비스도 있다.
+# 00. 그 외
+* 최대한 로컬하게 작성하라  (Component간의 데이터 이동 최소화, redux, mobx, ContextAPI, props)
+* 최대한 모듈화시켜라
 ***** 
 
 ## ○ 참고 영상
