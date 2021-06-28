@@ -1,29 +1,36 @@
 [웹접근성과 웹표준(Web Accessibility & Web Standards)] 
 ======================
-# 1. 웹접근성 (Web Accessibility) 이란?
-* 웹사이트에서 제공하는 정보를 차별 및 제한없이 동등하게 이용할 수 있도록 보장하는 것 **통합**하는 것.
-    - 장애인 및 고령자를 포함한 모든 사람
-    - 다양한 platform 및 Device와 웹브라우저 등 모든 환경
+# 1. 웹표준 (Web Standards) 이란?
+* 웹표준은 어떠한 운영체제나 브라우저를 사용하여도 동일한 콘텐츠를 볼 수 있도록 웹에서 표준적으로 사용되는 기술이나 규칙을 말한다.
+    - W3C에서 웹 표준이 확정되는 순서   
+    <img src="/KR/Guidebook/웹접근성/process.png" alt="how_decide_web_standard" title="how_decide_web_standard"></img>
 
-<img src="/KR/Guidebook/Jenkins/CI_Image.jpg" alt="CI_Image" title="CI-Image"></img>
+## 1.1 웹 표준이 가져다주는 장점
+* 검색엔진 최적화
+* 개발자가 더 이해하기 쉬운 코드
+* 구조와 표현의 분리
 
-# 2. WAI-ARIA
+# 2. 웹접근성 (Web Accessibility) 이란?
+* 개인의 능력에 상관없이 모든 사람엑 웹을 사용할 수 잇또록 하는 방법
+    - 장애인 및 고령자를 포함한 모든 사람 (예: 스크린 리더를 통한 시각 장애인이 웹을 사용할 수 있도록 해준다.)
+
+# 3.WAI-ARIA
 * WAI-ARIA는 웹 페이지, 특히 동적 콘텐츠, 그리고 Ajax, HTML, 자바스크립트 및 관련 기술로 개발된 사용자 인터페이스 구성 요소의 접근성을 증가시키는 방법에 대해 규정한 W3C가 출판한 기술 사양이다
 
-## 2.1 role (역할)
+## 3.1 role (역할)
     
 ```html
     <a href="" role="button">팝업</a>
 ```
 
-## 2.2 property (속성)
+## 3.2 property (속성)
     
 ```html
    <label for="id">아이디</label>
    <input type="text" id="id" aria-required="true">
 ```
 
-## 2.3 state (상태)
+## 3.3 state (상태)
     
 ```html
    <button aria-expanded="true">열기</button>
@@ -31,44 +38,7 @@
 ```
 
 
-# 3. Jenkins 란
-* CI Tools (무료 오픈소스, 설치형) / 빌드, 테스트, 정적 분석을 자동으로 실행 해줌
-<img src="/KR/Guidebook/Jenkins/jenkins_pipeline2.png" alt="jenkins_pipeline2" title="jenkins_pipeline2"></img>
-
-
-* 젠킨스 이전? : build, test 명령어를 수동으로 터미널에서 입력   
-<img src="/KR/Guidebook/Jenkins/before_jenkins.png" width="450px" alt="before_jenkins" title="before_jenkins"></img>
-
-* 젠킨스 이후? : 일일이 build, test 명령어를 입력하지 않아도 코드만 commit 해서 push 하면 자동적으로 실행   
-<img src="/KR/Guidebook/Jenkins/after_jenkins.png" width="450px" alt="after_jenkins" title="after_jenkins"></img>
-
-* 아키텍처   
-<img src="/KR/Guidebook/Jenkins/architecture.png" width="450px" alt="architecture" title="architecture"></img>
-
-***
-## 3.1 Jenkins 설치
-* [Jenkins 공식 홈페이지 다운로드 링크](https://www.jenkins.io/download/)   
-* 공식 홈페이지에서 사용자 환경에 맞게 다운로드하여 설치   
-* 설치 방법은 아래의 참조 영상 [빌드(Build)를 위한 Jenkins 설치 및 설정하기](https://youtu.be/m0tky1jyP-0) 참조
-
-
-## 3.2 Jenkins Plugin
-* 젠킨스의 장점 중 하나는 다양한 플러그인으로 기능을 확장 할 수 있다.   
-*  예를 들어 git plugin을 설치하면 git과 jenkins를 쉽게 연동할 수 있다.
-
-
-## 3.3 Jenkins 설정
-* Jenkins 접속하여 새로 생성하고 싶으면 왼쪽 메뉴에 **New Item** 을 클릭하여 Freestyle project(혹은 다르게도 가능)을 눌러 새 작업을 생성해준다.
-<img src="/KR/Guidebook/Jenkins/jenkins_configure.png" alt="jenkins_configure" title="jenkins_configure"></img>
-
-
- ### 3.3.1 General
-프로젝트에 대한 설명, url, discard old builds(오래된 빌드 삭제) 등 전반적인 설정을 한다.
-
- ### 3.3.2 Source Code Management (소스 코드 관리)
- Repositories 설정 (URL, 인증)을 할 수 있으며, 어떤 Branches 들을 build 할 것인지 설정할 수 있다.   
- public 레포지토리는 credentials(인증) 설정할 필요가 없으나, private 레포지토리는 git 과 연동하여 설정해야한다.
-
+#
  ###  3.3.3 Build Triggers (빌드 유발)
 빌드를 언제 실행할 지를 설정할 수 있다.   
     - Trigger builds remotely (e.g., from scripts) 빌드를 원격으로 유발 : 외부에서 URL을 통해 빌드를 진행 할 수 있도록 설정합니다.   
@@ -126,4 +96,5 @@
 * [국가별 웹접근성 정책](https://www.w3.org/WAI/policies)
 * [aria-label 속성 사용](https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) 
 * [웹접근성](https://www.w3.org/TR/wai-aria/#aria-label)
+* [웹 접근성 어디까지 신경써봤니?](https://velog.io/@dev-tinkerbell/%EC%9B%B9%EC%A0%91%EA%B7%BC%EC%84%B1-%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80-%EC%8B%A0%EA%B2%BD%EC%8D%A8%EB%B4%A4%EB%8B%88)
 
