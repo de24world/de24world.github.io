@@ -2,6 +2,12 @@
 [REST API vs GraphQL 차이점] 
 ======================
 
+* 관련 참조 문서   
+  - [REST API vs GraphQL 차이점](https://github.com/de24world/the-classic-of-development/blob/main/KR/Guidebook/RESTful%26GraphQL/README.md)
+  - [GraphQL 알아보기](https://github.com/de24world/the-classic-of-development/tree/main/KR/Guidebook/GraphQL)
+
+---
+
 # REST(ul) API vs GraphQL?
 * GraphQL은 REST API에 대안으로 페이스북에서 만든 데이터 전송방식
 
@@ -70,5 +76,5 @@
 ---
 ## ○ 참조 문서 및 사이트
 * [REST API 와 GraphQL](https://velog.io/@bclef25/REST-API-%EC%99%80-graphQL)  
-* [REST API, GraphQL 차이점 알아보기](https://velog.io/@djaxornwkd12/REST-API-vs-GraphQL-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0
+* [REST API, GraphQL 차이점 알아보기](https://velog.io/@djaxornwkd12/REST-API-vs-GraphQL-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0)
 
