@@ -67,11 +67,14 @@
 ### GraphQL
     * 서로 다른 모양의 다양한 요청들에 대해 응답할 수 있어야 할 때
     * 대부분의 요청이 CRUD(Create-Read-Update-Delete) 에 해당할 때
+    - 사용 프로젝트 예시 : Data 양이 많은 데이터 앱들(코로나 현황앱, 기상청 기후알림 앱 등), Overfetcing&Underfetcing 피하기 위함
 
 ### RESTful
-    * HTTP 와 HTTPs 에 의한 Caching 을 잘 사용하고 싶을 때
+    * HTTP 와 HTTPs 에 의한 Caching 을 잘 사용하고 싶을 때 (GraphQL도 캐싱이 가능하다)
     * File 전송 등 단순한 Text 로 처리되지 않는 요청들이 있을 때
     * 요청의 구조가 정해져 있을 때
+    - 사용 프로젝트 예시 : 회원정보(가입 및 로그인)를 caching 해야하는 앱, 혹은 URL 파라미터가 확실한 게시판 앱 등
+
 
 <img src="/KR/Guidebook/RESTful&GraphQL/GraphQL-vs-REST-Infographic.jpg" alt="GraphQL-vs-REST-Infographic" title="GraphQL-vs-REST-Infographic"></img>
 
