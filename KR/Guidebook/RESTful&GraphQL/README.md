@@ -9,7 +9,7 @@
 ---
 
 # REST(ul) API vs GraphQL?
-* GraphQL은 REST API에 대안으로 페이스북에서 만든 데이터 전송방식
+* GraphQL은 REST API에 대안으로 페이스북에서 만든 데이터 전송방식. GraphQL은 `API`를 위한 쿼리 언어이며 이미 존재하는 데이터로 쿼리를 수행하기 위한 런타임 입니다. GraphQL은 API에 있는 데이터에 대한 완벽하고 이해하기 쉬운 설명을 제공하고 클라이언트에게 필요한 것을 정확하게 요청할 수 있는 기능을 제공하며 시간이 지남에 따라 API를 쉽게 진화시키고 강력한 개발자 도구를 지원합니다.
 
 ## REST API 란?
 * Representational State Transfer의 약자로 좁은 의미로 HTTP Method(post, get, put, delete)를 통해 CRUD를 실행하는 API를 뜻한다. REST API는 그 형식(주소)만으로 대략 이게 무슨 요청인지 알게 해준다.
@@ -43,15 +43,19 @@
 2. 사용할 수 있는 메소드가 4가지 밖에 없다.
 3. 구형의 브라우저가 아직 지원하지 못하는 부분이 존재한다.
 4. Overfetcing, 즉 특정 데이터만 불러오고 싶은데 불필요한 데이터가 불러온다.
+5. Underfetcing, 즉 Resource 종류 별로 요청을 해야해서 요청횟수가 많아진다.
 
 ## GraphQL 장점
-1. HTTP 요청 횟수를 줄일 수 있다.
+1. HTTP 요청 횟수를 줄일 수 있다. - Underfetcing
     * RESTful 은 각 Resource 종류 별로 요청을 해야하고, 따라서 요청 횟수가 필요한 Resource 의 종류에 비례한다.
     * 반면 GraphQL 은 원하는 정보를 하나의 Query 에 모두 담아 요청하는 것이 가능하다.
 
-2. HTTP 응답의 Size 를 줄일 수 있다.
+2. HTTP 응답의 Size 를 줄일 수 있다. - Overfetcing
     * RESTful 은 응답의 형태가 정해져있고, 따라서 필요한 정보만 부분적으로 요청하는 것이 힘들다.
     * 반면 GraphQL 은 원하는 대로 정보를 요청하는 것이 가능하다.
+
+### 튜토리얼 영상
+- [GraphQL is the better REST](https://www.howtographql.com/basics/1-graphql-is-the-better-rest)  
 
 ## GraphQL 단점
 1. File 전송 등 Text 만으로 하기 힘든 내용들을 처리하기 복잡하다.
@@ -77,4 +81,4 @@
 ## ○ 참조 문서 및 사이트
 * [REST API 와 GraphQL](https://velog.io/@bclef25/REST-API-%EC%99%80-graphQL)  
 * [REST API, GraphQL 차이점 알아보기](https://velog.io/@djaxornwkd12/REST-API-vs-GraphQL-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0)
-
+* [REST VS GraphQL - Which Should be Used to Develop a Web API and Why?](https://www.promptbytes.com/blog/rest-vs-graphql-web-api-development)

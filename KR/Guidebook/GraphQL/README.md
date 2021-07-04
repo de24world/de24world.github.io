@@ -29,9 +29,11 @@ GraphQL API는 엔드포인트가 아닌 타입과 필드로 구성됩니다. �
 <img src="/KR/Guidebook/GraphQL/sample3.gif" alt="GraphQL_query3" title="GraphQL_query3"></img>
 
 
+## GraphQL 특징?
 
 
 ---
 ## ○ 참조 문서 및 사이트
+* [GraphQL 튜토리얼 동영상](https://www.howtographql.com/basics/0-introduction/)
 * [React Clean Code - Simple ways to write better and cleaner code](https://dev.to/thawkin3/react-clean-code-simple-ways-to-write-better-and-cleaner-code-2loa)
 
