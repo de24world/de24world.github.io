@@ -5,9 +5,9 @@
 까지 반영되어 있습니다.
 
 ## 목차
-  1. [시작하며(Getting Started)](#시작하며getteing-started)
-  2. [기본기능(Basic Features)](#변수variables)   
-    a. Pages   
+  1. [시작하며(Getting Started)](#시작하며getting-started)
+  2. 기본기능(Basic Features)   
+    a. [페이지들(Pages)](#페이지들pages)   
     b. Data Fetching
   3. [라우팅(Routing)](#함수functions)
   4. [API Routes(API routes)](#함수functions)
@@ -69,7 +69,7 @@ yarn add next react react-dom
 - `lint`- `next lint` Next.js에 내장된 ESLint 설정을 실행
 
 
-Next.js는 [페이지](https://nextjs.org/docs/basic-features/pages) 개념을 기반으로 구축되었습니다. A Page는 `pages` 디렉토리에 있는 [React Component](https://reactjs.org/docs/components-and-props.html)로  구성된 `.js`, `.jsx`, `.ts`, 또는 `.tsx` 파일입니다.
+Next.js는 [페이지](https://nextjs.org/docs/basic-features/pages) 개념을 기반으로 구축되었습니다. A Page는 `pages` 디렉토리에 있는 [React Component](https://reactjs.org/docs/components-and-props.html)로 내보내지는 `.js`, `.jsx`, `.ts`, 또는 `.tsx` 파일입니다.
 페이지는 파일 이름에 따라 경로로 연결됩니다. 예를 들어 `pages/about.js`은 `/about` 매핑됩니다. 파일 이름으로 동적 경로 매개변수를 추가할 수도 있습니다. 
 `pages` 폴더를 프로젝트에 생성해줍니다.
 `./pages/index.js`를 일반적으로 다음 내용으로 써줍니다:
@@ -91,7 +91,14 @@ export default HomePage
 - 정적 파일 제공 . `./public/`는 `/` 매핑됩니다.
 추가적으로, 어떤 Next.js 애플리케이션도 처음부터 프로덕션용(모드)에 사용할 준비가 되어 있습니다 . 자세한 내용은 [배포 문서](https://nextjs.org/docs/deployment) 를 참조 하세요.
 
+**[⬆ 상단으로](#목차)**
 
+## 페이지들(Pages)
+> 해당 문서는 Next.js 9.3 이상 버전입니다. 만약 이보다 더 오래된 버전을 사용하고 있다며, [이전 자료](https://nextjs.org/docs/tag/v9.2.2/basic-features/pages)들을 참조하세요
 
-  4. [객체와 자료구조(Objects and Data Structures)](#객체와-자료구조objects-and-data-structures)
-## **객체와 자료구조(Objects and Data Structures)**
+Next.js에서는 a **page**는 `pages` 디렉토리에 있는 [React Component](https://reactjs.org/docs/components-and-props.html)로 내보내지는 `.js`, `.jsx`, `.ts`, 또는 `.tsx` 파일입니다.
+예 :  아래와 같이 React component로 내보내지는(export) `pages/about.js`를 생성하였다면, `/about` 접근(액세스)할 수 있습니다.
+
+### 동적 경로 페이지들(Pages with Dynamic Routes)
+Next.js는 동적 경로 페이지를 지원합니다. 예를 들어 `pages/posts/[id].js`, 불리는 파일을 만들었다면, `posts/1`, `posts/2` 등에 접근하실 수 있습니다.
+> 동적 라우팅에 대해 자세히 알아보려면 [동적 라우팅 문서](https://nextjs.org/docs/routing/dynamic-routes) 확인하세요 .
