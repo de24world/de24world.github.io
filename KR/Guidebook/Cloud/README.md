@@ -3,31 +3,20 @@
 # 1. 클라우드 컴퓨팅이란 (What is Colud Computing) 
 * 클라우드 컴퓨팅은 인터넷을 통해 컴퓨팅 서비스를 제공하는 것으로, 클라우드라고도 합니다. 이러한 서비스에는 서버, 스토리지(저장소), 데이터베이스, 네트워킹, 소프트웨어, 분선 및 인텔리전스(인고지능, AI 등)가 포함됩니다. 클라우드 컴퓨팅은 신속한 혁신, 유연한 리소스, 규모의 경제성을 제공합니다.
 
-# 2. 클라우드 컴퓨팅이 저렴한 이유
+## 1.1 클라우드 컴퓨팅이 저렴한 이유
 * 운영 비용을 절감할 수 있습니다. - (하드웨어가 없고 일반적으로 사용하는만큼 비용을 지불하는 종량제 가격을 책정한다)
 * 인프라를 더 효율적으로 실행할 수 있습니다.
 * 비즈니스 요구 사항 변화에 따라 크리를 조정할 수 있습니다.
 
-# 3. Jenkins 란
-* CI Tools (무료 오픈소스, 설치형) / 빌드, 테스트, 정적 분석을 자동으로 실행 해줌
-<img src="/KR/Guidebook/Jenkins/jenkins_pipeline2.png" alt="jenkins_pipeline2" title="jenkins_pipeline2"></img>
-
-
-* 젠킨스 이전? : build, test 명령어를 수동으로 터미널에서 입력 (물론 gulp 라는 task runner 등을 통해서 간편하게 할 수 있지만 여러 레지포토리일 때는 에로사항이 많음)   
-<img src="/KR/Guidebook/Jenkins/before_jenkins.png" width="450px" alt="before_jenkins" title="before_jenkins"></img>
-
-* 젠킨스 이후? : 일일이 build, test 명령어를 입력하지 않아도 코드만 commit 해서 push 하면 자동적으로 실행   
-<img src="/KR/Guidebook/Jenkins/after_jenkins.png" width="450px" alt="after_jenkins" title="after_jenkins"></img>
-
-* 아키텍처   
-<img src="/KR/Guidebook/Jenkins/architecture.png" width="450px" alt="architecture" title="architecture"></img>
-
+# 2. 클라우드 서비스 모델이란
+* 클라우드 컴퓨팅은 다음 컴퓨팅 모델 중 하나에 속합니다. 클라우드 서비스 모델은 3가지로 나뉘어지며, 이러한 모델은 클라우드 공급자와 클라우드 사용자가 서로 다른 수준을
+ 관리하게 됩니다.
 ***
-## 3.1 Jenkins 설치
-* [Jenkins 공식 홈페이지 다운로드 링크](https://www.jenkins.io/download/)   
-* 공식 홈페이지에서 사용자 환경에 맞게 다운로드하여 설치   
-* 설치 방법은 아래의 참조 영상 [빌드(Build)를 위한 Jenkins 설치 및 설정하기](https://youtu.be/m0tky1jyP-0) 참조
-
+## 2.1 laas(Infrastructure as a service)
+* 우리가 자주 사용하는 가상 호스팅(VM Hosting)과 비슷하나 처음에 말했다시피, 가상 호스팅은 우리가 직접 장비를 사서 그 장비의 한에서 자원을 할당하고 구성해야 하지만, IaaS는 기업이 준비해놓은 환경에서 우리가 선택할 수 있다는 점에서 차이가 있습니다.
+* 일반적으로 적은 OS가 지원됩니다. (아마존은 일부 Linux와 Windows Server 제공)
+* 고객은 OS와 어플리케이션을 직접 관리해야 합니다.
+* 관리 측면에서 개발자와 인프라 관리자의 역할을 분담시킬 수 있습니다.
 
 ## 3.2 Jenkins Plugin
 * 젠킨스의 장점 중 하나는 다양한 플러그인으로 기능을 확장 할 수 있다.   
@@ -109,7 +98,7 @@
 
 
 ## ○ 참조 문서 및 사이트
-* [CI/CD가 뭔가요? | 얄코](https://www.yalco.kr/43_ci_cd/) 
+* [클라우드 컴퓨팅, IaaS, PaaS, SaaS이란?](https://wnsgml972.github.io/network/2018/08/14/network_cloud-computing/) 
 * [CICD-Jenkins-정리](https://velog.io/@jellyb3ar/CICD-Jenkins-%EC%A0%95%EB%A6%AC)
 * [3.3.3 Build Triggers (빌드 유발)](https://blog.naver.com/special9486/220274932377)
 
