@@ -105,7 +105,7 @@
 ***** 
 
 ## ○ 참고 영상
-* [Az-900 Azure Fundamentals | Week 1/6 | 애저 자격증 준비](https://youtu.be/GgKAkAWLnPw)
+* [Cloudflare Introduction (Tutorial for Beginners)](https://youtu.be/7riFvux9Bw4)
 * [빌드(Build)를 위한 Jenkins 설치 및 설정하기](https://youtu.be/m0tky1jyP-0)
 
 
