@@ -2,6 +2,7 @@
 ======================
 # 1. Lokalise? 
 * lokalise는 번역 관리 시스템으로, 현지화 작업 과정을 보다 빠르고 쉽게 만들어 줄 수 있습니다.
+<img src="/KR/Guidebook/Lokalise/lokalise.png" alt="lokalise" title="lokalise"></img>
 
 ## 1.1 Lokalise 장점
 * 단일 작업 공간에서 팀원들과 협업(콜라보)할 수 있습니다. 예를 들어, 업무(Tasks)를 할당(assign)하고 진행사항(progress)을 추적(track)하고, 누가 언제 무엇을 했는지 Lokalise 내에서 확인할 수 있습니다.
@@ -26,6 +27,8 @@
 * 클라우드 컴퓨팅은 다음 컴퓨팅 모델 중 하나에 속합니다. 클라우드 서비스 모델은 3가지로 나뉘어지며, 이러한 모델은 클라우드 공급자와 클라우드 사용자가 서로 다른 수준을
  관리하게 됩니다.
 ***
+
+
 ## 2.1 laas(Infrastructure as a service)
 * 우리가 자주 사용하는 가상 호스팅(VM Hosting)과 비슷하나 처음에 말했다시피, 가상 호스팅은 우리가 직접 장비를 사서 그 장비의 한에서 자원을 할당하고 구성해야 하지만, IaaS는 기업이 준비해놓은 환경에서 우리가 선택할 수 있다는 점에서 차이가 있습니다.
 * 일반적으로 적은 OS가 지원됩니다. (아마존은 일부 Linux와 Windows Server 제공)
