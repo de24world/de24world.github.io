@@ -4,6 +4,10 @@
 * lokalise는 번역 관리 시스템으로, 현지화 작업 과정을 보다 빠르고 쉽게 만들어 줄 수 있습니다.
 <img src="/KR/Guidebook/Lokalise/lokalise.png" alt="lokalise" title="lokalise"></img>
 
+* [Introducing Automations](https://youtu.be/uUxCkIcJH_U)
+
+
+
 ## 1.1 Lokalise 장점
 * 단일 작업 공간에서 팀원들과 협업(콜라보)할 수 있습니다. 예를 들어, 업무(Tasks)를 할당(assign)하고 진행사항(progress)을 추적(track)하고, 누가 언제 무엇을 했는지 Lokalise 내에서 확인할 수 있습니다.
 * 개발 주기에 병행하여(맞춰) 현지화 작업을 진행할 수 있습니다. 예를 들어, Adobe XD, Figma 및 Sketch 디자인 툴들과 작업을 함께 할 수 있으며, 그 작업이 끝날 때까지 기다릴 필요가 없습니다. 
@@ -23,17 +27,15 @@
 * 개발자 : Lokalize의 강력한 API를 통해 코드 저장소(Code Repository) 또는 사용자 정의 SDK와의 통합을 설정할 수 있습니다. 이 작업은 한번만 해주면, 자동으로 Lokalize 번역 작업을 수행하게 됩니다.   
 * 번역가 : 시각적 컨텍스트(스크린샷) 및 실시간 미리보기를 통해 이중작업으로 계속하여 수정이 가능합니다. 자동 완성, 인라인 기계 번역, 번역 메모리와 같은 내장 CAT 도구(Tool)를 사용하여 번역 품질과 속도를 향샹 시킬 수 있습니다.
 * 디자이너 : Figma, Sketch 또는 Adobe XD와 양방향 통합으로 프로세스를 자동화하여 시간을 절약할 수 있습니다. 다양한 디자인을 미리 보고 디자인 프로세스 초반에 피드백을 받아 품질을 향샹시킬 수 있습니다.
-# 2. 클라우드 서비스 모델이란
-* 클라우드 컴퓨팅은 다음 컴퓨팅 모델 중 하나에 속합니다. 클라우드 서비스 모델은 3가지로 나뉘어지며, 이러한 모델은 클라우드 공급자와 클라우드 사용자가 서로 다른 수준을
- 관리하게 됩니다.
+## 1.4 가격
+* [홈페이지 참조](https://lokalise.com/pricing)
+
 ***
 
+# 2. 사용방법 
 
-## 2.1 laas(Infrastructure as a service)
-* 우리가 자주 사용하는 가상 호스팅(VM Hosting)과 비슷하나 처음에 말했다시피, 가상 호스팅은 우리가 직접 장비를 사서 그 장비의 한에서 자원을 할당하고 구성해야 하지만, IaaS는 기업이 준비해놓은 환경에서 우리가 선택할 수 있다는 점에서 차이가 있습니다.
-* 일반적으로 적은 OS가 지원됩니다. (아마존은 일부 Linux와 Windows Server 제공)
-* 고객은 OS와 어플리케이션을 직접 관리해야 합니다.
-* 관리 측면에서 개발자와 인프라 관리자의 역할을 분담시킬 수 있습니다.
+## 2.1 Github 연결방법
+* [How to sync Github & Lokalise | Enterprise localization expert](https://youtu.be/AKaE_2Q4yBY)
 
 ## 3.2 Jenkins Plugin
 * 젠킨스의 장점 중 하나는 다양한 플러그인으로 기능을 확장 할 수 있다.   
