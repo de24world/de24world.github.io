@@ -35,6 +35,10 @@
 # 2. 사용방법 
 
 ## 2.1 Github 연결방법
+1. 맨 처음에는 프로젝트 생성해주며 (New project), 프로젝트 이름, 기본언어, 프로젝트 타입 등 설정해준다. (자세한 옵션은 해당 섹션 느낌표에 마우스를 올려 영어로 볼 수 있다.)
+2. 우측 상단에  ... Settings 버튼을 클릭하여, Intergrations 메뉴를 클릭하면 Github, Bitbucket 등 여러가지 툴과 통합할 수 있는데 Github Connect 를 클릭해준다.
+3. Github 토큰을 생성하여 입력하면 자동으로 불러오며 Repository 및 Branch을 선택할 수 있으며, Include in exports for(required)는 Web을 선택해주면 된다.
+4. github에 있는 번역 파일 (예: en.json) 선택해주어 확인을 클릭해주면 다시 프로젝트 메인 페이지로 돌아오면 파일이 불러온 것을 확인할 수 있다.
 * [How to sync Github & Lokalise | Enterprise localization expert](https://youtu.be/AKaE_2Q4yBY)
 
 ## 3.2 Jenkins Plugin
