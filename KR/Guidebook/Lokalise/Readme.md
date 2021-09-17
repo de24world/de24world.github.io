@@ -41,6 +41,11 @@
 4. github에 있는 번역 파일 (예: en.json) 선택해주어 확인을 클릭해주면 다시 프로젝트 메인 페이지로 돌아오면 파일이 불러온 것을 확인할 수 있다.
 * [How to sync Github & Lokalise | Enterprise localization expert](https://youtu.be/AKaE_2Q4yBY)
 
+
+## 2.2 번역 값 변경 및 업데이트
+1. 변경하고 싶은 Key 혹은 번역본을 수정한 다음 상단 download 를 클릭한 다음에 Build를 해준다.
+
+
 ## 3.2 Jenkins Plugin
 * 젠킨스의 장점 중 하나는 다양한 플러그인으로 기능을 확장 할 수 있다.   
 *  예를 들어 git plugin을 설치하면 git과 jenkins를 쉽게 연동할 수 있다.
