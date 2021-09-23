@@ -1,26 +1,19 @@
 [Swagger]] 스웨거
 ======================
-# 1. Lokalise? 
-* lokalise는 번역 관리 시스템으로, 현지화 작업 과정을 보다 빠르고 쉽게 만들어 줄 수 있습니다.
-<img src="/KR/Guidebook/Lokalise/lokalise.png" alt="lokalise" title="lokalise"></img>
+# 1. Swagger? 
+* 스웨거는 개발자가 REST 웹 서비스를 설계, 빌드, 문서화, 소비하는 일을 도와주는 대형 도구 생태계의 지원을 받는 오픈 소스 소프트웨어 프레임워크이다.
 
-* [Introducing Automations](https://youtu.be/uUxCkIcJH_U)
+## 1.1 Swagger를 사용하면 좋은 경우
+* 다른 개발팀과 협업을 진행할 경우
+* 이미 구축되어있는 프로젝트에 대한 유지보수를 진행할 경우 
+* 백엔드의 API를 호출하는 프론트엔드 프로그램을 제작할 경우
 
-
-
-## 1.1 Lokalise 장점
-* 단일 작업 공간에서 팀원들과 협업(콜라보)할 수 있습니다. 예를 들어, 업무(Tasks)를 할당(assign)하고 진행사항(progress)을 추적(track)하고, 누가 언제 무엇을 했는지 Lokalise 내에서 확인할 수 있습니다.
-* 개발 주기에 병행하여(맞춰) 현지화 작업을 진행할 수 있습니다. 예를 들어, Adobe XD, Figma 및 Sketch 디자인 툴들과 작업을 함께 할 수 있으며, 그 작업이 끝날 때까지 기다릴 필요가 없습니다. 
-* Lokalise 제품 내에 내장된 도구를 사용하세요. 번역 메모리, 자동 번역 그리고 QA를 체크할 수 있습니다. 제품의 스크린샷을 이용하여 해당 스크린샷을 텍스트를 번역할 수도 있습니다.
-* 현지화 작업의 번거로움을 덜어낼 수 있습니다. Mobile SDKs, API, CLI 등의 시간을 절약할 수 있으며, Github, Bitbucket, Gitlab, Azure의 레포(Repos)들 혹은 Jira와 통합하여 개발자의 작업을 줄일 수 있습니다.
-
-## 1.2 Lokalise 어디에 사용 가능한가?
-* 웹 앱 : frontend, bakcend, single page, blogs 등 어떤 웹 앱에 사용 가능합니다.
-* 모바일 앱 :  어떠한 모바일 Platform 언어 파일에도 업로드 가능합니다. 원한다면 Embed Lokalise IOS SDK 혹은 Lokalise Android SDK 가능합니다.
-* 게임 : 당사의 클라우드 소포트웨어드는 전 세계의 많은 주요 게임 개발자로부터 신뢰를 받고 있습니다.
-* 문서 : 당신의 DOCX 혹은 정적인 HTML 파일을 업로드하세요.
-* 마케팅 자산 : 웹 페이지, 블로그, 이메일 및 기타 마케팅 자산을 고객이 사용하는 언어로 말하게 하여, 참여도 및 전화율을 높이세요. HubSport, Contentful 및 Storyblok과 Lokalise 통합하여 현지화 작업을 신속하게 제어할 수 있습니다.
-* IoT : 가장 많이 사용되는 현지화 파일 형식을 지원합니다.
+## 1.2 Swagger 기능
+* API 디자인
+* API 빌드
+* API 문서화
+* API 테스팅
+* API 표준화
 
 ## 1.3 현지화 팀을 생산성을 10배 향샹 시켜줍니다.
 * 매니저 : 기존 기능을 업데이트하고 새로운 기능과 제품을 출시하는 동시에 여러 언어를 현지화할 수 있습니다. 팀의 작업 과정(Workflow)를 간소화하고 생산성을 극대화하며 다른 시장으로 확장을 가속화하게 해줍니다.  
@@ -117,7 +110,7 @@
 
 
 ## ○ 참조 문서 및 사이트
-* [클라우드 컴퓨팅, IaaS, PaaS, SaaS이란?](https://wnsgml972.github.io/network/2018/08/14/network_cloud-computing/) 
+* [Swagger란]](https://sarc.io/index.php/development/1974-swagger) 
 * [CICD-Jenkins-정리](https://velog.io/@jellyb3ar/CICD-Jenkins-%EC%A0%95%EB%A6%AC)
 * [3.3.3 Build Triggers (빌드 유발)](https://blog.naver.com/special9486/220274932377)
 
