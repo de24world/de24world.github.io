@@ -12,15 +12,48 @@
 * Typescript ready : 성장하고 있는 타입스크리트 커뮤니티를 지원할 수 있도록 Typescript 유형 선언 파일을 유지하기 위해 Fastify는 노력하고 있습니다.
 
 
-스키마 기반: 필수가 아니더라도 JSON 스키마 를 사용 하여 경로를 확인하고 출력을 직렬화 하는 것이 좋습니다. Fastify는 내부적으로 고성능 기능으로 스키마를 컴파일합니다.
-로깅: 로그는 매우 중요하지만 비용이 많이 듭니다. 우리는 이 비용을 거의 제거할 수 있는 최고의 로거, Pino를 선택했습니다 !
-개발자 친화적: 프레임워크는 성능과 보안을 희생하지 않으면서 개발자가 일상적으로 사용할 수 있도록 매우 풍부한 표현력을 제공하도록 구축되었습니다.
-TypeScript 준비: TypeScript 유형 선언 파일 을 유지 관리하기 위해 열심히 노력 하여 성장하는 TypeScript 커뮤니티를 지원할 수 있습니다.
-* API 디자인
-* API 빌드
-* API 문서화
-* API 테스팅
-* API 표준화
+# 2. Quick Start
+* 필수로 알아야하는 지식 : Javascript, Node.js, NPM 등
+* [공식 홈페이지 참조](https://www.fastify.io/)
+
+## 2.1 NPM을 통한 설치
+
+```
+npm install fastify
+```
+
+## 2.2 `server.js` 를 먼저 생성한다.
+```javascript
+// 먼저 필요한 Framework, fastify 를 불러오고 인스턴스화 시키자
+const fastify = require('fastify')({ logger: true })
+
+// route 선언한다.
+fastify.get('/', async (request, reply) => {
+  return { hello: 'world' }
+})
+
+// 서버를 실행시킨다.
+const start = async () => {
+  try {
+    await fastify.listen(3000)
+  } catch (err) {
+    fastify.log.error(err)
+    process.exit(1)
+  }
+}
+start()
+```
+
+## 2.3 아래의 명령어를 통하여 서버를 실행시켜준다.
+```
+node server
+```
+
+## 2.4 locahost:3000에서 테스트 할 수 있다.
+```
+curl http://localhost:3000
+```
+
 
 ## 1.3 현지화 팀을 생산성을 10배 향샹 시켜줍니다.
 * 매니저 : 기존 기능을 업데이트하고 새로운 기능과 제품을 출시하는 동시에 여러 언어를 현지화할 수 있습니다. 팀의 작업 과정(Workflow)를 간소화하고 생산성을 극대화하며 다른 시장으로 확장을 가속화하게 해줍니다.  
