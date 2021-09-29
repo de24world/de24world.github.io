@@ -55,11 +55,54 @@ curl http://localhost:3000
 ```
 
 
-## 1.3 현지화 팀을 생산성을 10배 향샹 시켜줍니다.
-* 매니저 : 기존 기능을 업데이트하고 새로운 기능과 제품을 출시하는 동시에 여러 언어를 현지화할 수 있습니다. 팀의 작업 과정(Workflow)를 간소화하고 생산성을 극대화하며 다른 시장으로 확장을 가속화하게 해줍니다.  
-* 개발자 : Lokalize의 강력한 API를 통해 코드 저장소(Code Repository) 또는 사용자 정의 SDK와의 통합을 설정할 수 있습니다. 이 작업은 한번만 해주면, 자동으로 Lokalize 번역 작업을 수행하게 됩니다.   
-* 번역가 : 시각적 컨텍스트(스크린샷) 및 실시간 미리보기를 통해 이중작업으로 계속하여 수정이 가능합니다. 자동 완성, 인라인 기계 번역, 번역 메모리와 같은 내장 CAT 도구(Tool)를 사용하여 번역 품질과 속도를 향샹 시킬 수 있습니다.
-* 디자이너 : Figma, Sketch 또는 Adobe XD와 양방향 통합으로 프로세스를 자동화하여 시간을 절약할 수 있습니다. 다양한 디자인을 미리 보고 디자인 프로세스 초반에 피드백을 받아 품질을 향샹시킬 수 있습니다.
+# 3. 요청/읍답 유효성 검사 및 Hooks (Request/Response validation and hooks) 
+* 물론, Fastify 로 더 많은 것을 할 수 있습니다.
+예를 들면, JSON 스키마(Schema) 를 사용하여 입력 및 출력 유효성 검사를 쉽게 재공하고 핸드러가 실행되기 전에 특정 작업을 수행할 수 있습니다.
+
+```javscript
+const fastify = require('fastify')({ logger: true })
+
+fastify.route({
+  method: 'GET',
+  url: '/',
+  schema: {
+    // 요청(request)들은 'name'이라는 매개변수가 있는 쿼리 문자열이 있어야 합니다.
+    querystring: {
+      name: { type: 'string' }
+    },
+    // 응답(request)은 '문자열' 유형의 'hello' 속성 객체여야 합니다.
+    response: {
+      200: {
+        type: 'object',
+        properties: {
+          hello: { type: 'string' }
+        }
+      }
+    }
+  },
+  // 이 함수는 핸들러가 실행되기 전에 모든 요청에 대해 실행됩니다.
+  preHandler: async (request, reply) => {
+    // 예를 들어 인증 확인을 할 수 있습니다.
+  },
+  handler: async (request, reply) => {
+    return { hello: 'world' }
+  }
+})
+
+const start = async () => {
+  try {
+    await fastify.listen(3000)
+  } catch (err) {
+    fastify.log.error(err)
+    process.exit(1)
+  }
+}
+start()
+
+```
+
+
+
 ## 1.4 가격
 * [홈페이지 참조](https://lokalise.com/pricing)
 
