@@ -1,0 +1,20 @@
+[Enzyme]] Enzyme
+======================
+# 1. Enzyme? 
+* Enzyme은 airbnb에서 개발한 React용 컴포넌트 테스트 플러그인입니다. 컴포넌트를 얖게(shallow) 렌더링해서 테스트 해 볼 수 있고, 전체 DOM을 불러와 이벤트를 시물레이트 할 수도 있고(ex. 버튼클릭, 인풋 수정, 폼 등록 등) 모든 라이프 사이클이 문제 없이 돌아가는지도 확인할 수 있습빈다.
+
+## 1.1 핵심 기능 (Core features)
+* shallow: 간단한 컴포넌트를 메모리에 렌더링합니다. ( 단일 컴포넌트를 테스트할 때 유용합니다. )
+* mount: HOC나 자식 컴포넌트 까지 전부 렌더링합니다. ( 다른 컴포넌트와의 관계를 테스트할 때 유용합니다. )
+* render: 컴포넌트를 정적인 html로 렌더링합니다. ( 컴포넌트가 브라우저에 붙었을 때 html로 어떻게 되는지 판단할 때 사용합니다.)
+
+## ○ 참고 영상
+* [Fastify Crash Course | Node.js Framework](https://youtu.be/Lk-uVEVGxOA)
+* [빌드(Build)를 위한 Jenkins 설치 및 설정하기](https://youtu.be/m0tky1jyP-0)
+
+
+## ○ 참조 문서 및 사이트
+* [유닛테스트(snap, enzyme)](https://velog.io/@aerirang647/%EC%9C%A0%EB%8B%9B%ED%85%8C%EC%8A%A4%ED%8A%B8#enzyme%EC%9D%84-%ED%86%B5%ED%95%9C-dom-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98) 
+* [Test Utility - Enzyme](https://shs400.github.io/2019/01/23/enzyme/)
+* [3.3.3 Build Triggers (빌드 유발)](https://blog.naver.com/special9486/220274932377)
+
