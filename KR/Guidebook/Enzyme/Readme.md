@@ -20,6 +20,71 @@ $ yarn add enzyme enzyme-adapter-react-16
 
 ** 라이프사이클 훅 호출 여부는 `mount` API와 `shallow` API가 상이하므로 유의가 필요하다. 간단하게 정리하면 `mount` API는 모든 라이프사이클 훅이 호출되고 `shallow` API는 `componentDidMount`와 `componentDidUpdate`를 제외하고 라이프사이클 훅이 호출된다. 이러한 차이점에 유의하여 선별적으로 API를 사용하도록 하자.
 
+## 1.3 사용 예시
+* counter.jsx
+```javscript
+import React, { Component } from 'react';
+
+export default class Counter extends Component {
+  state = {
+    value: 0,
+    title: '',
+  }
+
+  changeTitle = (e) => {
+    this.setState(() => ({ title: e.target.value }));
+  }
+
+  increment = () => {
+    this.setState(prevState => ({ value: prevState.value + 1 }));
+  };
+
+  render() {
+    return (
+      <div>
+        <input value={this.state.title} id="title" onChange={this.changeTitle} />
+        <b>{this.state.value}</b>
+        <button id="up" onClick={this.increment}>증가</button>
+      </div>
+    );
+  }
+}
+```
+
+* counter-test.jsx
+```javascript
+import React from 'react';
+import Counter from './counter.jsx';
+import { shallow, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+configure({ adapter: new Adapter() });
+
+describe('<Counter />', () => {
+  it('성공적으로 렌더링되어야 합니다.', () => {
+    const wrapper = shallow(<Counter />);
+    expect(wrapper.length).toBe(1);
+  });
+
+  it('타이틀 인풋이 렌더링되어야 합니다.', () => {
+    const wrapper = shallow(<Counter />);
+    expect(wrapper.find('#title').length).toEqual(1);
+  });
+
+  it('타이틀이 변경되어야 합니다.', () => {
+    const wrapper = shallow(<Counter />);
+    wrapper.find('#title').simulate('change', { target: { value: '값' } });
+    expect(wrapper.state().title).toBe('값');
+  });
+
+  it('숫자가 올라가야 합니다.', () => {
+    const wrapper = shallow(<Counter />);
+    wrapper.find('#up').simulate('click');
+    wrapper.find('#up').simulate('click');
+    expect(wrapper.state().value).toBeLessThan(1);
+  });
+});
+```
+
 ## ○ 참고 영상
 * [Fastify Crash Course | Node.js Framework](https://youtu.be/Lk-uVEVGxOA)
 * [빌드(Build)를 위한 Jenkins 설치 및 설정하기](https://youtu.be/m0tky1jyP-0)
@@ -28,5 +93,5 @@ $ yarn add enzyme enzyme-adapter-react-16
 ## ○ 참조 문서 및 사이트
 * [유닛테스트(snap, enzyme)](https://velog.io/@aerirang647/%EC%9C%A0%EB%8B%9B%ED%85%8C%EC%8A%A4%ED%8A%B8#enzyme%EC%9D%84-%ED%86%B5%ED%95%9C-dom-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98) 
 * [Test Utility - Enzyme](https://shs400.github.io/2019/01/23/enzyme/)
-* [3.3.3 Build Triggers (빌드 유발)](https://blog.naver.com/special9486/220274932377)
+* [React 테스트(test, jest, enzyme)](https://www.zerocho.com/category/React/post/583231469a87ec001834a0ec)
 
