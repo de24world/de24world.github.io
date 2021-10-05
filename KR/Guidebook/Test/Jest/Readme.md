@@ -1,7 +1,7 @@
 [Jest]] Jest
 ======================
-# 1. Enzyme? 
-* Enzyme은 airbnb에서 개발한 React용 컴포넌트 테스트 플러그인입니다. 컴포넌트를 얖게(shallow) 렌더링해서 테스트 해 볼 수 있고, 전체 DOM을 불러와 이벤트를 시물레이트 할 수도 있고(ex. 버튼클릭, 인풋 수정, 폼 등록 등) 모든 라이프 사이클이 문제 없이 돌아가는지도 확인할 수 있습니다.
+# 1. Jest? 
+* Jest는 페이스북에서 개발한 React에 포함되어있는 Javascript 테스트 도구입니다. 현재 Jest는 React뿐만 아니라, 여러 프레임워크 프로젝트에서 같이 사용할 수 있으며, 간단한 설정만으로도 빠르게 테스트를 진행할 수 있는 매력적인 Javascript 유닛 테스트 도구입니다.  
 
 ## 1.0 Enzyme?, Jest?, React Testing Library?
 * `Jest`는 테스트 Framework이며, `Enzyme`은 라이브러리로 Jest가 좀 더 큰 개념이다.   
@@ -93,7 +93,7 @@ describe('<Counter />', () => {
 
 
 ## ○ 참조 문서 및 사이트
-* [유닛테스트(snap, enzyme)](https://velog.io/@aerirang647/%EC%9C%A0%EB%8B%9B%ED%85%8C%EC%8A%A4%ED%8A%B8#enzyme%EC%9D%84-%ED%86%B5%ED%95%9C-dom-%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98) 
+* [JEST 사용법](https://velog.io/@seongkyun/JEST-%EC%82%AC%EC%9A%A9%EB%B2%95) 
 * [Test Utility - Enzyme](https://shs400.github.io/2019/01/23/enzyme/)
 * [React 테스트(test, jest, enzyme)](https://www.zerocho.com/category/React/post/583231469a87ec001834a0ec)
 
