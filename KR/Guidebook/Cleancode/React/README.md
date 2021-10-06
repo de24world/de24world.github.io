@@ -11,7 +11,13 @@
 * **lint**(eslint,tslint...)와 **formatter**(prettier,beautify...) 를 사용하면 훨씬 쉽게 코드를 clean하게 작성할 수 있다.
 * **class 및 함수** 작성시 [자바스크립트 클린코드](https://github.com/de24world/clean-code-javascript-ko/edit/master/README.md)를 참조 한다.   
 
-# 1. Conditional rendering on either condition <br> (두 가지 조건에서의 경우, 렌더링 조건문=조건부 삼항 연산자)
+
+# 1. Global 사용은 최소화하며, Local하게 컴포넌트를 작성하자
+* 리액트에서는 리덕스, Context API 등 Global State(글로벌 상태관리) 기능이 있는데, 이는 최소화하는 것을 개인적으로 권장한다. 리액트 코드 뿐만 아니라 CSS 역시 마찬가지이며, 컴포넌트간의 교류가 많으면 디버깅할 때 굉장히 어렵다. 그렇기 때문에 리액트는 다른 Frameworkd들과 달리 오직 단방향, Flux 디자인 패턴을 권장하고 있으며 컴포넌트는 최대한 Local하게 작성하는 것일 좋다고 생각한다.
+<img src="/KR/Guidebook/Cleancode/React/redux-global.png" alt="redux_global" title="redux_global"></img>
+
+
+# 2. Conditional rendering on either condition <br> (두 가지 조건에서의 경우, 렌더링 조건문=조건부 삼항 연산자)
 * 기존 자바스크립트에서는 **if & else (return...)** 문법을 사용하여 **true 값과 false 값을 반환**을 해주었는데, es6(모던자바스크립트)에서부터 [...?...: 조건부 삼항 연산자](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)로 대체한다
 
 Bad example 1, before es6(나쁜 예시 2, es6 이전에는)
@@ -78,7 +84,7 @@ export const ConditionalRenderingGood = () => {
 }
 ```
 
-# 2. Conditional rendering only for one condition<br> (한 가지 조건에서의 조건문)
+# 3. Conditional rendering only for one condition<br> (한 가지 조건에서의 조건문)
 * 만약 **false** 값을 반환하지 않고 **true** 값만 반환하고 싶을 때에는 위의 삼항 연산자를 쓰지말고, **&&** 연산자를 쓴다.  
 
 Bad example (나쁜 예시 )
