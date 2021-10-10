@@ -14,7 +14,7 @@
 
 # 관련 내용
 * [BEM](http://getbem.com/introduction/)
-* [CLS]()
+* [CLSX](https://github.com/lukeed/clsx)
 
 * 읽기 전 참조 문서   
   - [clean-code-javascript-ko](https://github.com/de24world/clean-code-javascript-ko/edit/master/README.md)
