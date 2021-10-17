@@ -58,6 +58,124 @@ img {
 - 복잡한 계산없이 간단하게 속성으로 aspect-ratio 를 지정하여 레이아웃 이동을 방지할 수 있습니다.
   `aspect-ratio` 는 CSS4에 새롭게 추가된 속성으로 x/y의 비율을 지정하면 해당 비율로 요소를 나타냅니다.
 
+```html
+<div class="box1">16:9 box</div>
+<div class="box2">4:3 box</div>
+<div class="box3">1:1 box</div>
+```
+
+```css
+.box1 {
+  aspect-ratio: 16/9;
+}
+.box2 {
+  aspect-ratio: 4/3;
+}
+.box3 {
+  aspect-ratio: 1/1;
+}
+```
+
+[결과]
+현재 aspect-ratio 속성은 Firefox 81이상 Chromium 에서 사용할 수 있으며 WebKit(Safari)에도 제공될 예정입니다. 예제 확인 시, 크롬에서는 chrome://flags/ 에서 Experimental Web Platform features 를 Enable 상태로 변경 후 확인해주세요.
+
+- HTML: 이미지가 있는 컨테이너
+
+```html
+<div class="box_img">
+  <div class="label">▼ 16:9</div>
+  <img
+    src="https://img.insight.co.kr/static/2019/03/22/700/za85ysn7ubgzuo3z441x.jpg"
+    width="640"
+    height="390"
+    alt="qkqhro"
+  />
+</div>
+
+<div class="box2_img">
+  <div class="label">▼ 4:3</div>
+  <img
+    src="https://img.insight.co.kr/static/2019/03/22/700/za85ysn7ubgzuo3z441x.jpg"
+    width="640"
+    height="390"
+    alt="qkqhro"
+  />
+</div>
+
+<div class="box3_img">
+  <div class="label">▼ 1:1</div>
+  <img
+    src="https://img.insight.co.kr/static/2019/03/22/700/za85ysn7ubgzuo3z441x.jpg"
+    width="640"
+    height="390"
+    alt="qkqhro"
+  />
+</div>
+```
+
+```css
+div[class^="box"] {
+  display: inline-block;
+  width: 300px;
+  margin-bottom: 40px;
+  padding: 10px 20px;
+  vertical-align: top;
+}
+
+/* 이미지 속성에 height: auto; 를 설정하여
+이미지 높이가 고정된 값(inline으로 선언한 height값)이 되지 않도록 합니다. */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* 컨테이너에 원하는 aspect-ratio 선언 */
+.box1_img img { aspect-ratio: 16/9; }
+.box2_img img { aspect-ratio: 4/3; }
+.box3_img img { aspect-ratio: 1/1; }
+...
+```
+
+모든 브라우저의 User [Agent Stylesheet](https://developer.mozilla.org/ko/docs/Web/CSS/Cascade#user-agent_stylesheets) 는 요소의 기존 `width` 및 `height` 속성에 따라 기본 `aspect-ratio` 를 추가할 수도 있습니다.
+
+```css
+img {
+  aspect-ratio: attr(width) / attr(height);
+}
+```
+
+이미지가 로드되기 전에 `width` 및 `height` 속성을 기준으로 aspect-ratio 를 계산합니다. 이 정보는 레이아웃 계산을 시작할 때 제공됩니다.
+이미지가 특정 `width`(예: `width: 100%`)로 표시되는 즉시 aspect-ratio를 사용하여 높이를 계산합니다.
+
+### 2.1.2 반응형 이미지 처리
+
+img 태그의 `width` 및 `height` 속성을 설정할 수 있도록 각 이미지는 같은 aspect-ratio 를 사용해야 합니다.
+
+또 기존의 img 태그는 오직 하나의 소스 파일만 제시하도록 되어 있는데, `srcset`과 `sizes`라는 두 가지 새로운 속성을 사용해 브라우저가 이미지를 나타내는데에 도움이 되는 몇 가지 추가 소스 이미지와 힌트를 제공 할 수 있습니다.
+
+```html
+<img
+  width="1000"
+  height="1000"
+  src="puppy-1000.jpg"
+  srcset="puppy-1000.jpg 1000w, puppy-2000.jpg 2000w, puppy-3000.jpg 3000w"
+  alt="Puppy with balloons"
+/>
+```
+
+그리고 하나의 이미지가 좁은 뷰포트에 잘려진 일부 이미지로 보여지게도 할 수 있습니다.
+
+```html
+<picture>
+  <source media="(max-width: 799px)" srcset="puppy-480w-cropped.jpg" />
+  <source media="(min-width: 800px)" srcset="puppy-800w.jpg" />
+  <img src="puppy-800w.jpg" alt="Puppy with balloons" />
+</picture>
+```
+
+이것은 Art direction problem 에 따른 이미지 처리 방법입니다. 자세한 내용은 아래 링크 참고 부탁드립니다.
+https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Art_direction
+
 ## 3.2 Jenkins Plugin
 
 - 젠킨스의 장점 중 하나는 다양한 플러그인으로 기능을 확장 할 수 있다.
