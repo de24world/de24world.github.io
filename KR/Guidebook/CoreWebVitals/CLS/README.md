@@ -33,6 +33,8 @@
 
 웹 초기(현재도 실무에 많이 사용하지만)에는 브라우저가 이미지를 가져오기 전에 충분한 공간이 할당되었는지 확인하기 위해 `<img>` 태그에 `width`와 `height` 속성을 추가했습니다. 이렇게 하면 `reflow`과 `re-layout`을 최소화할 수 있습니다.
 
+참고로 <U>대부분 문제가 img 의 높이와 넓이가 없어서 layout 밀리는 경우가 많다. 예를 들어, 어떤 button이나 <p> 태그가 밀리는 경우 주위에 `height`, `width`가 없는 `<img>` 태그가 있는지 꼭 확인해준다. 해당 이미지가 없어서 다른 요소가 layout 밀리는 경우가 많기 때문이다. </U>
+
 ```html
 <img src="puppy.jpg" width="640" height="360" alt="Puppy with balloons" />
 ```
@@ -172,6 +174,8 @@ img 태그의 `width` 및 `height` 속성을 설정할 수 있도록 각 이미�
   <img src="puppy-800w.jpg" alt="Puppy with balloons" />
 </picture>
 ```
+
+<img src="/KR/Guidebook/CoreWebVitals/CLS/srcet_size.jpeg" alt="srcet_size" title="srcet_size"></img>
 
 이것은 Art direction problem 에 따른 이미지 처리 방법입니다. 자세한 내용은 아래 링크 참고 부탁드립니다.
 https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Art_direction
