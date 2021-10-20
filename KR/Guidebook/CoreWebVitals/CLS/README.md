@@ -180,6 +180,22 @@ img 태그의 `width` 및 `height` 속성을 설정할 수 있도록 각 이미�
 이것은 Art direction problem 에 따른 이미지 처리 방법입니다. 자세한 내용은 아래 링크 참고 부탁드립니다.
 https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Art_direction
 
+## 4. FOUT / FOIT를 유발하는 웹 글꼴
+
+웹 글꼴을 다운로드하고 렌더링하면 다음 두 가지 방식때문에 레이아웃이 변경될 수 있습니다. 만
+
+- FOUT : 웹 폰트가 적용되지 않은 Fallback 폰트 상태(unstyled)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
+- FOIT : 웹 폰트가 적용되지 않은 텍스트가 보이지 않는 상태(insvisible)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
+
+다음 도구를 사용하면 이를 최소화할 수 있습니다.
+`font-display`를 사용하면 `auto`, `swap`, `block`, `fallback`, `optional` 등의 값을 사용하여 사용자 정의 폰트의 렌더링 동작을 수정할 수 있습니다. 그러나 위의 방법으로는 (`optional` 제외) 모두 re-layout 될 수 있습니다.
+
+Chrome 83부터 다음도 권장할 수 있습니다.
+
+- 주요 웹 글꼴에 `<link el=preload>`를 사용하면 사전 로드된 폰트가 첫 번째 paint와 일치할 가능성이 커지며, 이 경우 레이아웃 이동이 없습니다.
+- `<link el=preload>`와 `font-display: optional`을 조합하여 사용할 수 있습니다.
+  자세한 내용은 [Prevent layout shifting and flashes of invisible text (FOIT) by preloading optional fonts](https://web.dev/preload-optional-fonts/) 를 참고해주세요.
+
 ## 3.2 Jenkins Plugin
 
 - 젠킨스의 장점 중 하나는 다양한 플러그인으로 기능을 확장 할 수 있다.
