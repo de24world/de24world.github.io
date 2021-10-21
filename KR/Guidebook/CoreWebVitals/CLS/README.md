@@ -180,12 +180,14 @@ img 태그의 `width` 및 `height` 속성을 설정할 수 있도록 각 이미�
 이것은 Art direction problem 에 따른 이미지 처리 방법입니다. 자세한 내용은 아래 링크 참고 부탁드립니다.
 https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Art_direction
 
-## 4. FOUT / FOIT를 유발하는 웹 글꼴
+## 4. FOIT / FOUT 를 유발하는 웹 글꼴
 
 웹 글꼴을 다운로드하고 렌더링하면 다음 두 가지 방식때문에 레이아웃이 변경될 수 있습니다. 만
 
-- FOUT : 웹 폰트가 적용되지 않은 Fallback 폰트 상태(unstyled)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
-- FOIT : 웹 폰트가 적용되지 않은 텍스트가 보이지 않는 상태(insvisible)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
+- FOIT(Flash Of Invisible Text) : 웹 폰트가 적용되지 않은 텍스트가 보이지 않는 상태(insvisible)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
+- FOUT(Flash Of Unstyled Text) : 웹 폰트가 적용되지 않은 Fallback 폰트 상태(unstyled)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
+
+<img src="/KR/Guidebook/CoreWebVitals/CLS/FOIT_FOUT.gif" alt="FOIT_FOUT" title="FOIT_FOUT"></img>
 
 다음 도구를 사용하면 이를 최소화할 수 있습니다.
 `font-display`를 사용하면 `auto`, `swap`, `block`, `fallback`, `optional` 등의 값을 사용하여 사용자 정의 폰트의 렌더링 동작을 수정할 수 있습니다. 그러나 위의 방법으로는 (`optional` 제외) 모두 re-layout 될 수 있습니다.
@@ -215,4 +217,4 @@ Chrome 83부터 다음도 권장할 수 있습니다.
 
 - [새로운 웹페이지 성능 측정 지표 CLS(Cumulative Layout Shift)](https://wit.nts-corp.com/2020/12/28/6240)
 - [Cumulative Layout Shift(누적 레이아웃 이동, CLS)](https://web.dev/i18n/ko/cls/)
-- [클린코드란 무엇인가?](https://www.samsungsds.com/kr/story/cleancode-0823.html)
+- [웹 폰트 사용과 최적화의 최근 동향](https://d2.naver.com/helloworld/4969726)
