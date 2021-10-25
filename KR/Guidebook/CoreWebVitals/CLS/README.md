@@ -203,6 +203,14 @@ https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Respon
 
 <img src="/KR/Guidebook/CoreWebVitals/CLS/advertising_slot.gif" alt="advertising_slot" title="advertising_slot"></img>
 
+### 2.1.1 광고 슬롯을 위한 정적 공간 확보
+
+최대한 작은 사이즈의 광고 서비스를 사용 하기를 권장합니다. 만약 광고 슬롯을 사용하게 된다면, 정적으로 스타일하기를 추천하며 그렇지 않으면 페이지 레이아웃 로드 후에 광고 슬롯 요소의 크기가 변경될 수 있습니다.
+
+### 2.1.2 뷰포트 상단 근처에 광고 배치하지 않기
+
+뷰포트 상단 근처에 있는 광고는 가운데이 있는 광고보다 더 큰 레이아웃 이동을 유발할 수 있습니다. 왜냐하면 상단의 광고는 아래의 콘텐츠를 변화를 일으키는 더 많은 요소가 포함되어있기 때문이다. 반대로 뷰포트의 중간간 근처에 있는 광고는 위의 콘텐츠 이동할 가능성이 비교적 적습니다.
+
 ## 4. FOIT / FOUT 를 유발하는 웹 글꼴
 
 웹 글꼴을 다운로드하고 렌더링하면 다음 두 가지 방식때문에 레이아웃이 변경될 수 있습니다. 만
@@ -220,16 +228,6 @@ Chrome 83부터 다음도 권장할 수 있습니다.
 - 주요 웹 글꼴에 `<link el=preload>`를 사용하면 사전 로드된 폰트가 첫 번째 paint와 일치할 가능성이 커지며, 이 경우 레이아웃 이동이 없습니다.
 - `<link el=preload>`와 `font-display: optional`을 조합하여 사용할 수 있습니다.
   자세한 내용은 [Prevent layout shifting and flashes of invisible text (FOIT) by preloading optional fonts](https://web.dev/preload-optional-fonts/) 를 참고해주세요.
-
-## 3.2 Jenkins Plugin
-
-- 젠킨스의 장점 중 하나는 다양한 플러그인으로 기능을 확장 할 수 있다.
-- 예를 들어 git plugin을 설치하면 git과 jenkins를 쉽게 연동할 수 있다.
-
-## 3.3 Jenkins 설정
-
-- Jenkins 접속하여 새로 생성하고 싶으면 왼쪽 메뉴에 **New Item** 을 클릭하여 Freestyle project(혹은 다르게도 가능)을 눌러 새 작업을 생성해준다.
-  <img src="/KR/Guidebook/Jenkins/jenkins_configure.png" alt="jenkins_configure" title="jenkins_configure"></img>
 
 ## ○ 참고 영상
 
