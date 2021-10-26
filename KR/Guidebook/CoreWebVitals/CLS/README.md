@@ -211,6 +211,20 @@ https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Respon
 
 뷰포트 상단 근처에 있는 광고는 가운데이 있는 광고보다 더 큰 레이아웃 이동을 유발할 수 있습니다. 왜냐하면 상단의 광고는 아래의 콘텐츠를 변화를 일으키는 더 많은 요소가 포함되어있기 때문이다. 반대로 뷰포트의 중간간 근처에 있는 광고는 위의 콘텐츠 이동할 가능성이 비교적 적습니다.
 
+## 2.2 [Embeds and iframes](https://web.dev/optimize-cls/#embeds-and-iframes)
+
+Embed 가능한 위젯을 사용하면 페이지에 삽입 가능한 웹 콘텐츠(예 : YouTube의 비디오, Google Maps의 지도, 소셜 미디어 게시물 등)를 포함할 수 있습니다. 이러한 Embeds는 다음과 같은 형식을 가지고 있습니다.
+
+- HTML fallback 및 fallback을 embed로 변환하는 JavaScript 태그
+- inline HTML snippet
+- iframe 삽입
+
+이러한 Embeds는 Embed 크기 및 규모가 얼마나 될 것인지 미리 알기 어렵습니다. 만
+
+-예: 소셜 미디어 포스트의 경우 embed 이미지, 비디오, 여러 줄의 텍스트 등이 있는지
+
+따라서 Embeds를 제공하는 플랫폼은 Embeds를 위한 항상 충분한 공간을 확보하지는 않으며, 최종적으로 로드할 때 레이아웃 이동이 발생할 수 있습니다.
+
 ## 4. FOIT / FOUT 를 유발하는 웹 글꼴
 
 웹 글꼴을 다운로드하고 렌더링하면 다음 두 가지 방식때문에 레이아웃이 변경될 수 있습니다. 만
