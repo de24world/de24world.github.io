@@ -180,6 +180,10 @@ img 태그의 `width` 및 `height` 속성을 설정할 수 있도록 각 이미�
 이것은 Art direction problem 에 따른 이미지 처리 방법입니다. 자세한 내용은 아래 링크 참고 부탁드립니다.
 https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Art_direction
 
+### 2.1.3 img 파일 대신 svg 파일을 활용하자
+
+- 개인적으로 프로젝트 진행하면서 느낀점은 img 파일 대신 svg 파일을 활용하는 것도 좋은 방법이라고 생각한다. svg파일로 된 이미지가 많으면 img 파일을 대체하자. 개인적으로 React 프로젝트 진행시 svgr 이라는 라이브러리를 사용해서 img 파일을 대체했더니 번거로움을 훨씬 줄어들었다. 왜냐하면 svg 파일에는 대부분 이미 width와 height 값이 포함되어있기 때문이다.
+
 ## 2. 크기가 정의되지 않은 광고, Embed 및 Ifrme
 
 ## 2.1 광고
