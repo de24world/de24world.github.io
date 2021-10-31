@@ -12,13 +12,13 @@
 
 A HOC that brings Next.js and Redux together
 
-:warning: The current version of this library only works with Next.js 9.3 and newer. If you are required to use Next.js 6-9 you can use version 3-5 of this library, see [branches](https://github.com/kirill-konshin/next-redux-wrapper/branches). Otherwise, consider upgrading Next.js. :warning:
+:warning: 해당 라이브러리는 현재 Next.js 9.3 이상에서만 작동합니다. 만약 Next.js 6-9 버전을 사용하고 있다면 해당 라이브러리 버전 3 ~ 5 버전을 사용하세요. [branches](https://github.com/kirill-konshin/next-redux-wrapper/branches). 그렇지 않다면 Next.js 버전 업그레이드를 권장합니다.
 
-Contents:
+내용:
 
-- [Motivation](#motivation)
-- [Installation](#installation)
-- [Usage](#usage)
+- [왜?](#왜?)
+- [설치](#설치)
+- [사용법](#사용법)
   - [State reconciliation during hydration](#state-reconciliation-during-hydration)
   - [Configuration](#configuration)
   - [getStaticProps](#getstaticprops)
@@ -41,31 +41,31 @@ Contents:
 - [Upgrade from 1.x to 2.x](#upgrade-from-1x-to-2x)
 - [Resources](#resources)
 
-# Motivation
+# 왜?
 
-Setting up Redux for static apps is rather simple: a single Redux store has to be created that is provided to all pages.
+정적인 앱에서 Redux를 사용하는 것은 다소 간단합니다. 모든 페이지에서 제공되는 단일 Redux 저장소(Store)만 만들면 되기 때문이빈다.
 
-When Next.js static site generator or server side rendering is involved, however, things start to get complicated as another store instance is needed on the server to render Redux-connected components.
+그러나 Next.js 로 정적인 사이트를 만들거나 혹은 Redux 연결 구성요스를 렌더링하기 위해서버에 다른 저장소 인스턴스가 필요하기 때문에 상황이 복잡해집니다.
 
-Furthermore, access to the Redux `Store` may also be needed during a page's `getInitialProps`.
+또한 페이지의 `getInitialProps`와 작동하는동안 Redux의 `Store(저장소)`와 연결(access)가 필요할 수 있습니다.
 
-This is where `next-redux-wrapper` comes in handy: It automatically creates the store instances for you and makes sure they all have the same state.
+`next-redux-wrapper`가 유용한 이유가 여기 있습니다. 해당 라이브러리는 자동적으로 저장소 인스턴스를 생성하고모두 동일한 상태를 가질 수 있도록 해줍니다.
 
-Moreover it allows to properly handle complex cases like `App.getInitialProps` (when using `pages/_app`) together with `getStaticProps` or `getServerSideProps` at individual page level.
+또한 개별 페이지 레벨에서 `App.getInitialProps` 같이 (`pages/_app` 사용한다면) 복잡한 경우에도 `getStaticProps` 혹은 `getServerSideProps`를 함께 허용해줍니다.
 
-Library provides uniform interface no matter in which Next.js lifecycle method you would like to use the `Store`.
+라이브러리는 Next.js 라이플 사이클 바업에 상관없이 Store를 사용하게 해줍니다.
 
-In Next.js example https://github.com/vercel/next.js/blob/canary/examples/with-redux/store.js#L55 store is being replaced on navigation. Redux will re-render components even with memoized selectors (`createSelector` from `recompose`) if `store` is replaced: https://codesandbox.io/s/redux-store-change-kzs8q, which may affect performance of the app by causing a huge re-render of everything, even what did not change. This library makes sure `store` remains the same.
+Next.js 예제에서 https://github.com/vercel/next.js/blob/canary/예제에서s/with-redux/store.js#L55 store 가 네비게이션을 대체합니다. Redux는 https://codesandbox.io/s/redux-store-change-kzs8q 가 교체되는 경우 메모된 선택기(`createSelector` 의 `recompose`)를 사용 하여 구성 요소를 다시 렌더링합니다. 이는 심지어 변하지 않은 모든 것까지도 동일하게 해당 라이브러리는 유지되도록 해줍니다.
 
-# Installation
+# 설치
 
 ```bash
 npm install next-redux-wrapper react-redux --save
 ```
 
-Note that `next-redux-wrapper` requires `react-redux` as peer dependency.
+`next-redux-wrapper`는 `react-redux` 라이브러리에 종속(의존)되어있습니다.
 
-# Usage
+# 사용법
 
 Live example: https://codesandbox.io/s/next-redux-wrapper-demo-7n2t5.
 
