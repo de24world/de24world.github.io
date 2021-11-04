@@ -31,6 +31,8 @@ Next.js 와 관련된 어떠한 질문이 있다면, Next.js의 커뮤니티에 
 
 전역적(gloabal)인 데이터를 공유할 수 있도록 고안된 방법이다.
 
+<img src="/React/StateManagement/context-api.png" alt="context-api" title="context-api"></img>
+
 b. 장점
 
 - 별도의 라이브러리가 필요 없다.
@@ -44,7 +46,8 @@ c. 단점
 d. 이럴 때 사용하세요
 
 - low-freqeuncy, 즉 낮은 빈도로 상태값이 변경할 때.
-- 로그인 정보 또는 웹사이트 내에 사용자 설정 파일, 테마, 언어 등을 컴포넌트 간 공유 데이터에 사용됩니다.
+- 로그인 정보 또는 웹사이트 내에 사용자 설정 파일, 테마, 언어, 모달(Modal), 알림창(Alert) 등 상태값이 자주 바뀌지 않는 경우, 컴포넌트 간 간단한 공유 데이터에 사용됩니다.
+- 즉 Child Component가 많지 않을 때 사용하는 것을 추천한다
 
 ## ○ 참고 영상
 
@@ -54,5 +57,5 @@ d. 이럴 때 사용하세요
 ## ○ 참조 문서 및 사이트
 
 - [리액트 상태 관리 가이드](https://www.stevy.dev/react-state-management-guide)
-- [Cumulative Layout Shift(누적 레이아웃 이동, CLS)](https://web.dev/i18n/ko/cls/)
+- [리덕스 잘 쓰고 계시나요?](https://ridicorp.com/story/how-to-use-redux-in-ridi/)
 - [웹 폰트 사용과 최적화의 최근 동향](https://d2.naver.com/helloworld/4969726)
