@@ -33,5 +33,4 @@ Next.js 와 관련된 어떠한 질문이 있다면, Next.js의 커뮤니티에 
 ## ○ 참조 문서 및 사이트
 
 - [mext.js 카테고리 블로그](https://birdmee.tistory.com/category/Next.js)
-- [리덕스 잘 쓰고 계시나요?](https://ridicorp.com/story/how-to-use-redux-in-ridi/)
 - [웹 폰트 사용과 최적화의 최근 동향](https://d2.naver.com/helloworld/4969726)
