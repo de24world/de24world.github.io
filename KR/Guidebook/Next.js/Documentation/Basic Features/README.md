@@ -123,14 +123,15 @@ Next.js는 동적 경로 페이지를 지원합니다. 예를 들어 `pages/post
 
 Next.js 의 이미지 컴포넌트인, `next/image`는, HTML의 `<img>`의 최신웹용을 위한 확장판입니다. 여기에는 다양한 퍼포먼스 최적화를 통하여 좋은 [Core Web Vitals](https://nextjs.org/learn/seo/web-performance) 달성하는데 도움을 줍니다. 이 점수들은 당신의 웹사이트를 측정하는데 매우 중요한 요소이며, 그리고 [구글 검색 순위](https://nextjs.org/learn/seo/web-performance/seo-impact)에 반영되기도 합니다.
 
-These scores are an important measurement of user experience on your website, and are factored into Google's search rankings.
+이미지 컴포넌트는 다음과 같은 몇 가지 최적화 포함하고 있습니다:
 
-Some of the optimizations built into the Image component include:
+- 향상된 성능: 항상 알맞은 이미지 사이지를 각각의 기기에 맞게 제공하며, 모던한 이미지 포맷으로 사용 가능합니다.
+- 시각적 안정성: [누적레이아웃 이동(Cumulative Layout Shift)](https://nextjs.org/learn/seo/web-performance/cls)을 자동적으로 방지합니다.
+- 더 빠른 페이지 로드 : 뷰포트에 들어갈 때만 이미지들이 불러와지며, 옵션적으로 흘릿하게 표시됩니다.
+- 참고 자료(Assset) 유연성: 심지어 원격 서버에 저장된 이미지의 경우에도 이미지 크기 재조정(resizing)을 해줍니다.
 
-Improved Performance: Always serve correctly sized image for each device, using modern image formats.
-Visual Stability: Prevent Cumulative Layout Shift automatically.
-Faster Page Loads: Images are only loaded when they enter the viewport, with optional blur-up placeholders
-Asset Flexibility: On-demand image resizing, even for images stored on remote servers
+### 이미지 구성 요소 사용
+
 Using the Image Component
 To add an image to your application, import the next/image component:
 
@@ -151,6 +152,7 @@ import profilePic from '../public/me.png'
 function Home() {
 return (
 <>
+
 <h1>My Homepage</h1>
 <Image
 src={profilePic}
@@ -172,6 +174,7 @@ import Image from 'next/image'
 export default function Home() {
 return (
 <>
+
 <h1>My Homepage</h1>
 <Image
         src="/me.png"
@@ -216,6 +219,7 @@ import Image from 'next/image'
 export default function Home() {
 return (
 <>
+
 <h1>My Homepage</h1>
 <Image
         src="/me.png"
