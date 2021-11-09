@@ -130,15 +130,18 @@ Next.js 의 이미지 컴포넌트인, `next/image`는, HTML의 `<img>`의 최�
 - 더 빠른 페이지 로드 : 뷰포트에 들어갈 때만 이미지들이 불러와지며, 옵션적으로 흘릿하게 표시됩니다.
 - 참고 자료(Assset) 유연성: 심지어 원격 서버에 저장된 이미지의 경우에도 이미지 크기 재조정(resizing)을 해줍니다.
 
-### 이미지 구성 요소 사용
+### 이미지 Component 사용하기
 
-Using the Image Component
-To add an image to your application, import the next/image component:
+당신의 어플리케이션에 이미지를 추가하기 위해서는 [next/image](https://nextjs.org/docs/api-reference/next/image) 컴포넌트를 import해주세요
 
-import Image from 'next/image'
-Now, you can define the src for your image (either local or remote).
+```javascript
+import Image from "next/image";
+```
 
-Local Images
+이제 이미지(local 혹은 remote)의 `src` 정의해주세요.
+
+#### Local 이미지
+
 To use a local image, import your .jpg, .png, or .webp files:
 
 import profilePic from '../public/me.png'
