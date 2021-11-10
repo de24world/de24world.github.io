@@ -142,10 +142,13 @@ import Image from "next/image";
 
 #### Local 이미지
 
-To use a local image, import your .jpg, .png, or .webp files:
+`.jpg`, `.png` 또는 `.webp` 로컬 이미지 파일을 import해주세요
 
+```javascirpt
 import profilePic from '../public/me.png'
-Dynamic await import() or require() are not supported. The import must be static so it can be analyzed at build time.
+```
+
+동적으로 `await import()` 또는 `require()`는 지원하지 않습니다. `import`는 반드시 빌드시에 분석하기 위해서 정적이여야합니다.
 
 Next.js will automatically determine the width and height of your image based on the imported file. These values are used to prevent Cumulative Layout Shift while your image is loading.
 
@@ -316,3 +319,4 @@ See all available properties for the Image component
 - [리액트 상태 관리 가이드](https://www.stevy.dev/react-state-management-guide)
 - [리덕스 잘 쓰고 계시나요?](https://ridicorp.com/story/how-to-use-redux-in-ridi/)
 - [웹 폰트 사용과 최적화의 최근 동향](https://d2.naver.com/helloworld/4969726)
+- [](https://uploadcare.com/blog/next-js-image-optimization/)
