@@ -150,28 +150,30 @@ import profilePic from '../public/me.png'
 
 동적으로 `await import()` 또는 `require()`는 지원하지 않습니다. `import`는 반드시 빌드시에 분석하기 위해서 정적이여야합니다.
 
-Next.js will automatically determine the width and height of your image based on the imported file. These values are used to prevent Cumulative Layout Shift while your image is loading.
+Next.js는 가져온 파일에 따라 이미지의 `넓이(width)`와 `높이(height)`를 자동적으로 결정합니다. 이 값은 이미지를 로드하는동안 [Cumulative Layout Shift(레이아웃 이동)](https://nextjs.org/learn/seo/web-performance/cls)
 
-import Image from 'next/image'
-import profilePic from '../public/me.png'
+```javascript
+import Image from "next/image";
+import profilePic from "../public/me.png";
 
 function Home() {
-return (
-<>
-
-<h1>My Homepage</h1>
-<Image
-src={profilePic}
-alt="Picture of the author"
-// width={500} automatically provided
-// height={500} automatically provided
-// blurDataURL="data:..." automatically provided
-// placeholder="blur" // Optional blur-up while loading
-/>
-<p>Welcome to my homepage!</p>
-</>
-)
+  return (
+    <>
+      <h1>My Homepage</h1>
+      <Image
+        src={profilePic}
+        alt="Picture of the author"
+        // width={500} automatically provided (자동적으로 제공)
+        // height={500} automatically provided (자동적으로 제공)
+        // blurDataURL="data:..." automatically provided (자동적으로 제공)
+        // placeholder="blur" // Optional blur-up while loading(로딩되는 동안 옵션으로 모자이크 처리)
+      />
+      <p>Welcome to my homepage!</p>
+    </>
+  );
 }
+```
+
 Remote Images
 To use a remote image, the src property should be a URL string, which can be relative or absolute. Because Next.js does not have access to remote files during the build process, you'll need to provide the width, height and optional blurDataURL props manually:
 
