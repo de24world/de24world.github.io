@@ -174,29 +174,33 @@ function Home() {
 }
 ```
 
-Remote Images
-To use a remote image, the src property should be a URL string, which can be relative or absolute. Because Next.js does not have access to remote files during the build process, you'll need to provide the width, height and optional blurDataURL props manually:
+#### 원격(Remote) 이미지
 
-import Image from 'next/image'
+원격 이미지를 사용하기 위해서는, `src` 속성이 URL [상대경로](https://nextjs.org/docs/basic-features/image-optimization#loaders) 혹은 [절대경로](https://nextjs.org/docs/basic-features/image-optimization#domains)인 문자열이여야 합니다. 왜냐하면 Next.js는 빌드 프로세스 중에 원격 파일을 접근(access) 할 수 없기 때문에, `[넓이](https://nextjs.org/docs/api-reference/next/image#width)`, `[높이](https://nextjs.org/docs/api-reference/next/image#height)` 그리고 `[blurDataURL](https://nextjs.org/docs/api-reference/next/image#blurdataurl) props 일일이 입력해주어야 합니다.
+
+```javascript
+import Image from "next/image";
 
 export default function Home() {
-return (
-<>
-
-<h1>My Homepage</h1>
-<Image
+  return (
+    <>
+      <h1>My Homepage</h1>
+      <Image
         src="/me.png"
         alt="Picture of the author"
         width={500}
         height={500}
       />
-<p>Welcome to my homepage!</p>
-</>
-)
+      <p>Welcome to my homepage!</p>
+    </>
+  );
 }
-Learn more about the sizing requirements in next/image.
+```
 
-Domains
+`next/image`의 [사이즈 요구사항](https://nextjs.org/docs/basic-features/image-optimization#image-sizing)에 대해서 더 알아보세요.
+
+#### Domains
+
 Sometimes you may want to access a remote image, but still use the built-in Next.js Image Optimization API. To do this, leave the loader at its default setting and enter an absolute URL for the Image src.
 
 To protect your application from malicious users, you must define a list of remote domains that you intend to access this way. This is configured in your next.config.js file, as shown below:
