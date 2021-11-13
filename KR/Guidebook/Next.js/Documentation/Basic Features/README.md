@@ -199,18 +199,22 @@ export default function Home() {
 
 `next/image`의 [사이즈 요구사항](https://nextjs.org/docs/basic-features/image-optimization#image-sizing)에 대해서 더 알아보세요.
 
-#### Domains
+#### 도메인
 
-Sometimes you may want to access a remote image, but still use the built-in Next.js Image Optimization API. To do this, leave the loader at its default setting and enter an absolute URL for the Image src.
+원격 이미지를 사용하려는 경우도 있지만, Next.js 내장 이미지 최적화 API를 계속 사용하세요. 이렇게 하려면, 로더(`loader`)로 기본 설정을 유지하고, 이미지 `src` URL 절대경로를 입력하세요.
 
-To protect your application from malicious users, you must define a list of remote domains that you intend to access this way. This is configured in your next.config.js file, as shown below:
+악의적인 사용자로부터 응용 프로그램을 보호하려면 이러한 방식으로 이러한 방식으로 접근(access)하려는 원격 도메인 목록을 정의해야합니다. 이것은 아래와 같이 `next.config.js`파일에서 구성해주어야 합니다 :
 
+```javascript
 module.exports = {
-images: {
-domains: ['example.com', 'example2.com'],
-},
-}
-Loaders
+  images: {
+    domains: ["example.com", "example2.com"],
+  },
+};
+```
+
+#### Loaders
+
 Note that in the example earlier, a partial URL ("/me.png") is provided for a remote image. This is possible because of the next/image loader architecture.
 
 A loader is a function that generates the URLs for your image. It appends a root domain to your provided src, and generates multiple URLs to request the image at different sizes. These multiple URLs are used in the automatic srcset generation, so that visitors to your site will be served an image that is the right size for their viewport.
