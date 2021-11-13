@@ -213,17 +213,18 @@ module.exports = {
 };
 ```
 
-#### Loaders
+#### 로더(Loaders)
 
-Note that in the example earlier, a partial URL ("/me.png") is provided for a remote image. This is possible because of the next/image loader architecture.
+앞의 예에서는 원격 이미지를 위한 대한 부분 URL (`"/me.png`)이 제공됩니다. 이는 `next/imag` [lodaer](https://nextjs.org/docs/api-reference/next/image#loader) 아키텍처 때문에 가능한 것입니다.
 
-A loader is a function that generates the URLs for your image. It appends a root domain to your provided src, and generates multiple URLs to request the image at different sizes. These multiple URLs are used in the automatic srcset generation, so that visitors to your site will be served an image that is the right size for their viewport.
+로더는 이미지에 대한 URL을 생성하는 기능입니다. 제공된 `src`에 루트(root) 도메인을 추가하고 여러 URL을 생성하여 다른 크기의 이미지를 요청합니다. 이러한 여러 URL은 자동 [srcset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset) 생성에 사용됨으로 사이트를 방문하는 방문객에게 뷰포트에 적합한 크기의 이미지를 제공합니다.
 
-The default loader for Next.js applications uses the built-in Image Optimization API, which optimizes images from anywhere on the web, and then serves them directly from the Next.js web server. If you would like to serve your images directly from a CDN or image server, you can use one of the built-in loaders or write your own with a few lines of JavaScript.
+Next.js 응용 프로그램의 기본 로더는 내장된 이미지 최적화 API 를 사용하여 웹의 모든 위치에서 이미지를 최적화 한 다음, NExt.js 웹 서버에 직접 이미지를 제공합니다. CDN이나 이미지 서버에서 직접 이미지를 서비스하려면 [내장된 로더들](https://nextjs.org/docs/api-reference/next/image#built-in-loaders) 중 하나를 사용하거나 몇 줄의 자바스크립트를 직접 작성하시면 됩니다.rom a CDN or image server, you can use one of the built-in loaders or write your own with a few lines of JavaScript.
 
-Loaders can be defined per-image, or at the application level.
+로더들은 이미지마다 정의할 수 있거나, 혹은 어플맄이션 레벨에 따라 정의될 수 있습니다.
 
-Priority
+#### 우선순위(Priority)
+
 You should add the priority property to the image that will be the Largest Contentful Paint (LCP) element for each page. Doing so allows Next.js to specially prioritize the image for loading (e.g. through preload tags or priority hints), leading to a meaningful boost in LCP.
 
 The LCP element is typically the largest image or text block visible within the viewport of the page. When you run next dev, you'll see a console warning if the LCP element is an <Image> without the priority property.
