@@ -104,20 +104,20 @@ export default HomePage
 
 # 기본 기능(Basic Features)
 
-## 페이지들(Pages)
+# 페이지들(Pages)
 
 > 해당 문서는 Next.js 9.3 이상 버전입니다. 만약 이보다 더 오래된 버전을 사용하고 있다며, [이전 자료](https://nextjs.org/docs/tag/v9.2.2/basic-features/pages)들을 참조하세요
 
 Next.js에서는 a **page**는 `pages` 디렉토리에 있는 [React Component](https://reactjs.org/docs/components-and-props.html)로 내보내지는 `.js`, `.jsx`, `.ts`, 또는 `.tsx` 파일입니다.
 예 : 아래와 같이 React component로 내보내지는(export) `pages/about.js`를 생성하였다면, `/about` 접근(액세스)할 수 있습니다.
 
-### 동적 경로 페이지들(Pages with Dynamic Routes)
+## 동적 경로 페이지들(Pages with Dynamic Routes)
 
 Next.js는 동적 경로 페이지를 지원합니다. 예를 들어 `pages/posts/[id].js`, 불리는 파일을 만들었다면, `posts/1`, `posts/2` 등에 접근하실 수 있습니다.
 
 > 동적 라우팅에 대해 자세히 알아보려면 [동적 라우팅 문서](https://nextjs.org/docs/routing/dynamic-routes) 확인하세요
 
-## 이미지 최적화(Image Optimization)
+# 이미지 최적화(Image Optimization)
 
 [Image Component 예시](https://github.com/vercel/next.js/tree/canary/examples/image-component)
 
@@ -130,7 +130,7 @@ Next.js 의 이미지 컴포넌트인, `next/image`는, HTML의 `<img>`의 최�
 - 더 빠른 페이지 로드 : 뷰포트에 들어갈 때만 이미지들이 불러와지며, 옵션적으로 흘릿하게 표시됩니다.
 - 참고 자료(Assset) 유연성: 심지어 원격 서버에 저장된 이미지의 경우에도 이미지 크기 재조정(resizing)을 해줍니다.
 
-### 이미지 Component 사용하기
+## 이미지 Component 사용하기
 
 당신의 어플리케이션에 이미지를 추가하기 위해서는 [next/image](https://nextjs.org/docs/api-reference/next/image) 컴포넌트를 import해주세요
 
@@ -140,7 +140,7 @@ import Image from "next/image";
 
 이제 이미지(local 혹은 remote)의 `src` 정의해주세요.
 
-#### Local 이미지
+### Local 이미지
 
 `.jpg`, `.png` 또는 `.webp` 로컬 이미지 파일을 import해주세요
 
@@ -174,7 +174,7 @@ function Home() {
 }
 ```
 
-#### 원격(Remote) 이미지
+### 원격(Remote) 이미지
 
 원격 이미지를 사용하기 위해서는, `src` 속성이 URL [상대경로](https://nextjs.org/docs/basic-features/image-optimization#loaders) 혹은 [절대경로](https://nextjs.org/docs/basic-features/image-optimization#domains)인 문자열이여야 합니다. 왜냐하면 Next.js는 빌드 프로세스 중에 원격 파일을 접근(access) 할 수 없기 때문에, `[넓이](https://nextjs.org/docs/api-reference/next/image#width)`, `[높이](https://nextjs.org/docs/api-reference/next/image#height)` 그리고 `[blurDataURL](https://nextjs.org/docs/api-reference/next/image#blurdataurl) props 일일이 입력해주어야 합니다.
 
@@ -199,7 +199,7 @@ export default function Home() {
 
 `next/image`의 [사이즈 요구사항](https://nextjs.org/docs/basic-features/image-optimization#image-sizing)에 대해서 더 알아보세요.
 
-#### 도메인
+### 도메인
 
 원격 이미지를 사용하려는 경우도 있지만, Next.js 내장 이미지 최적화 API를 계속 사용하세요. 이렇게 하려면, 로더(`loader`)로 기본 설정을 유지하고, 이미지 `src` URL 절대경로를 입력하세요.
 
@@ -213,7 +213,7 @@ module.exports = {
 };
 ```
 
-#### 로더(Loaders)
+### 로더(Loaders)
 
 앞의 예에서는 원격 이미지를 위한 대한 부분 URL (`"/me.png`)이 제공됩니다. 이는 `next/imag` [lodaer](https://nextjs.org/docs/api-reference/next/image#loader) 아키텍처 때문에 가능한 것입니다.
 
@@ -223,35 +223,38 @@ Next.js 응용 프로그램의 기본 로더는 내장된 이미지 최적화 AP
 
 로더들은 이미지마다 정의할 수 있거나, 혹은 어플맄이션 레벨에 따라 정의될 수 있습니다.
 
-#### 우선순위(Priority)
+### 우선순위(Priority)
 
-You should add the priority property to the image that will be the Largest Contentful Paint (LCP) element for each page. Doing so allows Next.js to specially prioritize the image for loading (e.g. through preload tags or priority hints), leading to a meaningful boost in LCP.
+각각의 페이지의 [Largest Contentful Paint (LCP) element](https://web.dev/lcp/#what-elements-are-considered) 위해서 이미지에 `우선순위(priority)` 속성을 추가해야 합니다. 이렇게 하면 Next.js가 로딩을 위해서(예: 태그를 미리 로드하거나 힌트들을 우선하여) 이미지의 우선 순위를 특별히 지정할 수 있어, LCP 점수를 증가시킬 수 있도록 해줍니다.
 
-The LCP element is typically the largest image or text block visible within the viewport of the page. When you run next dev, you'll see a console warning if the LCP element is an <Image> without the priority property.
+LCP element(요소)들은 페이지 내의 뷰포트에서 보이는 특별히 가장 큰 이미지 혹은 텍스트 블록입니다. 만약 당신이 `next dev` 실행시킨다면, `<Image>` `우선순위(priority)` 속성이 없는 LCP element들을 콘솔 경고창(console warning)에서 볼 수 있습니다.
 
-Once you've identified the LCP image, you can add the property like this:
+LCP 이미지를 식별했다면, 아래와 같이 속성을 추가할 수 있습니다:
 
-import Image from 'next/image'
+```javascript
+import Image from "next/image";
 
 export default function Home() {
-return (
-<>
-
-<h1>My Homepage</h1>
-<Image
+  return (
+    <>
+      <h1>My Homepage</h1>
+      <Image
         src="/me.png"
         alt="Picture of the author"
         width={500}
         height={500}
         priority
       />
-<p>Welcome to my homepage!</p>
-</>
-)
+      <p>Welcome to my homepage!</p>
+    </>
+  );
 }
-See more about priority in the next/image component documentation.
+```
 
-Image Sizing
+속성에 대한 자세한 사항은 [`next/image` 컴포넌트 문서](https://nextjs.org/docs/api-reference/next/image#priority)에서 확인하세요.
+
+### Image Sizing
+
 One of the ways that images most commonly hurt performance is through layout shift, where the image pushes other elements around on the page as it loads in. This performance problem is so annoying to users that it has its own Core Web Vital, called Cumulative Layout Shift. The way to avoid image-based layout shifts is to always size your images. This allows the browser to reserve precisely enough space for the image before it loads.
 
 Because next/image is designed to guarantee good performance results, it cannot be used in a way that will contribute to layout shift, and must be sized in one of three ways:
