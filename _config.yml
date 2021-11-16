@@ -12,22 +12,22 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale: "en-US"
-title: "the-classic-of-development"
+locale: "ko-KR"
+title: "젊은이 개발자 일기"
 title_separator: "-"
-subtitle: # site tagline that appears below site title in masthead
+subtitle: "독일 외노자 웹개발자"
 name: "Pusha"
-description: "About Development"
+description: "독일에 사는 (구)젊은 개발자"
 url: "https://de24world.github.io/"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo: "/assets/images/pusha_logo.jpg"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs: true # true, false (default)
 words_per_minute: 200
 comments:
   provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -94,18 +94,18 @@ social:
 
 # Analytics
 analytics:
-  provider: false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider: "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id:
-    anonymize_ip: # true, false (default)
+    tracking_id: "G-1VEHKDKW9B"
+    anonymize_ip: false
 
 # Site Author
 author:
-  name: "Your Name"
+  name: "웹개발자, 프론트 개발자"
   avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: "I am an **amazing** person."
-  location: "Somewhere"
-  email:
+  bio: "Javascript(Typescript), React, Next.js ..."
+  location: "Germany"
+  email: "de24world@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -266,15 +266,20 @@ compress_html:
     envs: development
 
 # Defaults
-defaults:
-  # _posts
+defaults: # 페이지의 머리말에 선언하지 않아도 아래 내용들은 기본값으로 적용됨.
   - scope:
-      path: ""
-      type: posts
+      path: "" # 모든 경로의 페이지에 적용
+      type: posts # 포스트 타입의 페이지에 적용
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: # true
-      share: true
-      related: true
+      layout: single # single 레이아웃을 적용
+      author_profile: true # 내 프로필을 사이드바에 표시함
+      read_time: false # '한 포스트를 다 읽는데 n분 걸림' 이라는 문구를 붙여주는 완독 추측 시간
+      comments: true # 댓글 기능 활성화
+      share: true # 소셜 공유 기능 활성화
+      related: true # 관련 포스트 추천 활성화
+      toc: true # 현재 페이지의 목차 보기 활성화
+      sidebar: # (내 커스텀 변수) 블로그 목차 보기
+      nav: main-sidebar # (내 커스텀 변수) /_data/navigation.yml에 main-sidebar의 내용을 정의
+      show_date: true # 날짜 표기
+# (내 커스텀 기능) 구글 드라이브에서 이미지 가져오기 url 접두어
+# gdrive_url_prefix: "https://drive.google.com/uc?export=view&id="
