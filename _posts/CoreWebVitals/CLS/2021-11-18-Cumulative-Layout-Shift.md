@@ -255,7 +255,7 @@ Embed 가능한 위젯을 사용하면 페이지에 삽입 가능한 웹 콘텐�
 - FOIT(Flash Of Invisible Text) : 웹 폰트가 적용되지 않은 텍스트가 보이지 않는 상태(insvisible)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
 - FOUT(Flash Of Unstyled Text) : 웹 폰트가 적용되지 않은 Fallback 폰트 상태(unstyled)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
 
-![foit-fout-animation](/assets/images/foit-fout-animation.gif)
+<img src="/assets/images/CLS/foit-fout-animation.gif" />
 
 다음 도구를 사용하면 이를 최소화할 수 있습니다.
 `font-display`를 사용하면 `auto`, `swap`, `block`, `fallback`, `optional` 등의 값을 사용하여 사용자 정의 폰트의 렌더링 동작을 수정할 수 있습니다. 그러나 위의 방법으로는 (`optional` 제외) 모두 re-layout 될 수 있습니다.
