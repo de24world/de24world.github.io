@@ -30,7 +30,7 @@ sidebar:
 # 1. [CLS] Cumulative Layout Shift란?
 
 - 방문자에게 콘텐츠가 얼마나‌ 불안정한 지 측정하는 사용자 경험 측정 항목 입니다. 현재 보고 있는 페이지에 갑자기 발생하는 레이아웃의 변경은 시각적으로 거슬리며 사용자의 주의를 산만하게 합니다. 즉 사용자가 예상치 못한 레이아웃 이동을 경험하는 빈도를 수량화하므로 시각적 안정성을 측정할 때 중요한 사용자 중심 메트릭입니다. CLS가 낮으면 우수한 사용자 경험을 보장하는 데 도움이 됩니다.
-- ![cls_point](images/cls_point.png)
+  <img src="'./cls_point.png" />
 
 ## 1.1 CLS 점수
 
@@ -53,7 +53,7 @@ sidebar:
 
 - 이미지 및 비디오 요소에 `width`와 `height` 속성을 항상 포함하거나 또는 CSS를 사용하여 필요한 공간(`aspect-radio-box`)를 잡습니다. 이 방법을 사용하면 이미지가 로드되는 동안 브라우저가 문서의 공간을 올바르게 할당할 수 있습니다.
 
-  ![](images/img_width_height.gif)
+<img src="./img_width_height.gif" />
 
 웹 초기(현재도 실무에 많이 사용하지만)에는 브라우저가 이미지를 가져오기 전에 충분한 공간이 할당되었는지 확인하기 위해 `<img>` 태그에 `width`와 `height` 속성을 추가했습니다. 이렇게 하면 `reflow`과 `re-layout`을 최소화할 수 있습니다.
 
@@ -199,7 +199,7 @@ img 태그의 `width` 및 `height` 속성을 설정할 수 있도록 각 이미�
 </picture>
 ```
 
-![](images/srcet_size.jpeg)
+<img src="./srcet_size.jpeg" />
 
 이것은 Art direction problem 에 따른 이미지 처리 방법입니다. 자세한 내용은 아래 링크 참고 부탁드립니다.
 https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Art_direction
@@ -229,7 +229,7 @@ https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Respon
 - 광고 슬롯에 가능한 가장 큰 크기를 확보하여 레이아웃 이동을 방지하십시오. 더 작은 광고 소재가 슬롯을 채우면 빈 공간이 생길 위험이 있습니다.
 - 이전 데이터를 기반으로 광고 슬롯에 가장 적합한 크기를 선택합니다.
 
-![](images/advertising_slot.gif)
+<img src="./advertising_slot.gif">
 
 ### 2.2.2 광고 슬롯을 위한 정적 공간 확보
 
@@ -260,7 +260,7 @@ Embed 가능한 위젯을 사용하면 페이지에 삽입 가능한 웹 콘텐�
 - FOIT(Flash Of Invisible Text) : 웹 폰트가 적용되지 않은 텍스트가 보이지 않는 상태(insvisible)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
 - FOUT(Flash Of Unstyled Text) : 웹 폰트가 적용되지 않은 Fallback 폰트 상태(unstyled)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
 
-![](images/FOIT_FOUT.gif)
+<img src="./FOIT_FOUT.gif" />
 
 다음 도구를 사용하면 이를 최소화할 수 있습니다.
 `font-display`를 사용하면 `auto`, `swap`, `block`, `fallback`, `optional` 등의 값을 사용하여 사용자 정의 폰트의 렌더링 동작을 수정할 수 있습니다. 그러나 위의 방법으로는 (`optional` 제외) 모두 re-layout 될 수 있습니다.
