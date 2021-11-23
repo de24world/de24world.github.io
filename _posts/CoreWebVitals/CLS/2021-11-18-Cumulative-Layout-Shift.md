@@ -54,7 +54,7 @@ sidebar:
 
 웹 초기(현재도 실무에 많이 사용하지만)에는 브라우저가 이미지를 가져오기 전에 충분한 공간이 할당되었는지 확인하기 위해 `<img>` 태그에 `width`와 `height` 속성을 추가했습니다. 이렇게 하면 `reflow`과 `re-layout`을 최소화할 수 있습니다.
 
-<img src="./width_height.gif" />
+<img src="/assets/images/CLS/width_height.gif" />
 
 참고로 <U>대부분 문제가 img 의 높이와 넓이가 없어서 layout 밀리는 경우가 많다. 예를 들어, 어떤 button이나 <p> 태그가 밀리는 경우 주위에 `height`, `width`가 없는 `<img>` 태그가 있는지 꼭 확인해준다. 해당 이미지가 없어서 다른 요소가 layout 밀리는 경우가 많기 때문이다. </U>
 
@@ -255,7 +255,7 @@ Embed 가능한 위젯을 사용하면 페이지에 삽입 가능한 웹 콘텐�
 - FOIT(Flash Of Invisible Text) : 웹 폰트가 적용되지 않은 텍스트가 보이지 않는 상태(insvisible)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
 - FOUT(Flash Of Unstyled Text) : 웹 폰트가 적용되지 않은 Fallback 폰트 상태(unstyled)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
 
-![foit-fout-animation](./foit-fout-animation.gif)
+![foit-fout-animation](/assets/images/foit-fout-animation.gif)
 
 다음 도구를 사용하면 이를 최소화할 수 있습니다.
 `font-display`를 사용하면 `auto`, `swap`, `block`, `fallback`, `optional` 등의 값을 사용하여 사용자 정의 폰트의 렌더링 동작을 수정할 수 있습니다. 그러나 위의 방법으로는 (`optional` 제외) 모두 re-layout 될 수 있습니다.
