@@ -67,7 +67,7 @@ extends:
 
 [`@typescript-eslint/parser`]: https://github.com/typescript-eslint/typescript-eslint/tree/HEAD/packages/parser
 
-You will also need to install and configure the TypeScript resolver:
+또한 Typescript resolver를 설치하고 구성해야 합니다.
 [`eslint-import-resolver-typescript`](https://github.com/alexgorbatchev/eslint-import-resolver-typescript).
 
 # import/order: 모듈(module) 가져오기(import) 순서(order) 규칙 적용하기
@@ -116,10 +116,10 @@ var path = require("path"); // `path` 는 `lodash` 이전에 반드시 import �
 // -----
 
 var path = require("path");
-import foo from "./foo"; // `import` statements must be before `require` statement
+import foo from "./foo"; // `import` 는 `require` 이전에 써야합니다.
 ```
 
-## Pass
+## 맞는 경우(Pass)
 
 ```js
 import path from "path";
@@ -132,13 +132,13 @@ var _ = require("lodash");
 
 // -----
 
-// Allowed as ̀`babel-register` is not assigned.
+//  ̀`babel-register` 가 먼저 사용해야합니다.
 require("babel-register");
 var path = require("path");
 
 // -----
 
-// Allowed as `import` must be before `require`
+// `import` 는 `require` 이전에 사용해야 합니다.
 import foo from "./foo";
 var path = require("path");
 ```
