@@ -31,8 +31,6 @@ sidebar:
 
 - 방문자에게 콘텐츠가 얼마나‌ 불안정한 지 측정하는 사용자 경험 측정 항목 입니다. 현재 보고 있는 페이지에 갑자기 발생하는 레이아웃의 변경은 시각적으로 거슬리며 사용자의 주의를 산만하게 합니다. 즉 사용자가 예상치 못한 레이아웃 이동을 경험하는 빈도를 수량화하므로 시각적 안정성을 측정할 때 중요한 사용자 중심 메트릭입니다. CLS가 낮으면 우수한 사용자 경험을 보장하는 데 도움이 됩니다.
 
-![Googles Update zu Core Web Vitals: Cumulative Layout Shift verändert |  OnlineMarketing.de](https://onlinemarketing.de/wp-content/uploads/2021/01/Cumulative-Layout-Shift-bei-Google-Core-Web-Vitals.jpg)
-
 ## 1.1 CLS 점수
 
 - 일정기간동안 레이아웃 이동이 없는 상태에서 발생하는 예상하지 않은 레이아웃 이동에 대한 누적된 점수이며, 뷰포트에서 이동한 콘텐츠의 양과 영향ㅇㄹ 받은 요사가 이동한 거리를 확인합니다. 좋은 사용자 환경을 제공하려면 사이트에서 CLS점수가 0.1 미만이어야 합니다.
@@ -55,6 +53,8 @@ sidebar:
 - 이미지 및 비디오 요소에 `width`와 `height` 속성을 항상 포함하거나 또는 CSS를 사용하여 필요한 공간(`aspect-radio-box`)를 잡습니다. 이 방법을 사용하면 이미지가 로드되는 동안 브라우저가 문서의 공간을 올바르게 할당할 수 있습니다.
 
 웹 초기(현재도 실무에 많이 사용하지만)에는 브라우저가 이미지를 가져오기 전에 충분한 공간이 할당되었는지 확인하기 위해 `<img>` 태그에 `width`와 `height` 속성을 추가했습니다. 이렇게 하면 `reflow`과 `re-layout`을 최소화할 수 있습니다.
+
+<img src="./width_height.gif" />
 
 참고로 <U>대부분 문제가 img 의 높이와 넓이가 없어서 layout 밀리는 경우가 많다. 예를 들어, 어떤 button이나 <p> 태그가 밀리는 경우 주위에 `height`, `width`가 없는 `<img>` 태그가 있는지 꼭 확인해준다. 해당 이미지가 없어서 다른 요소가 layout 밀리는 경우가 많기 때문이다. </U>
 
@@ -250,12 +250,12 @@ Embed 가능한 위젯을 사용하면 페이지에 삽입 가능한 웹 콘텐�
 
 ## 4. FOIT / FOUT 를 유발하는 웹 글꼴
 
-웹 글꼴을 다운로드하고 렌더링하면 다음 두 가지 방식때문에 레이아웃이 변경될 수 있습니다. 
+웹 글꼴을 다운로드하고 렌더링하면 다음 두 가지 방식때문에 레이아웃이 변경될 수 있습니다.
 
 - FOIT(Flash Of Invisible Text) : 웹 폰트가 적용되지 않은 텍스트가 보이지 않는 상태(insvisible)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
 - FOUT(Flash Of Unstyled Text) : 웹 폰트가 적용되지 않은 Fallback 폰트 상태(unstyled)에서 폰트가 바뀌면서 텍스트 번쩍이 일어남
 
-![Cumulative Layout Shift: Improve Google CLS Score - eSellerTechnologies](foit-fout-animation-16377096258903-16377096324295.gif)
+![foit-fout-animation](./foit-fout-animation.gif)
 
 다음 도구를 사용하면 이를 최소화할 수 있습니다.
 `font-display`를 사용하면 `auto`, `swap`, `block`, `fallback`, `optional` 등의 값을 사용하여 사용자 정의 폰트의 렌더링 동작을 수정할 수 있습니다. 그러나 위의 방법으로는 (`optional` 제외) 모두 re-layout 될 수 있습니다.
