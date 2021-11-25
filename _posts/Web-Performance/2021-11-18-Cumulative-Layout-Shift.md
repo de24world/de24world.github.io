@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Cumulative Layout Shift[CLS]"
-categories: CoreWebVitals
+categories: Web-Performance
 tag:
   [
     Cumulative Layout Shift,
@@ -16,6 +16,9 @@ tag:
     FOUT,
     Embed,
     Iframe,
+    web performance,
+    웹퍼포먼스,
+    웹성능,
   ]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
