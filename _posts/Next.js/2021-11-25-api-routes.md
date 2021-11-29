@@ -2,7 +2,7 @@
 layout: single
 title: "Next.js API Routes"
 categories: Next.js
-tag: [Next.js, API, Routes, Dynamic API Routes]
+tag: [Next.js, API, Routes, Dynamic API Routes, Rest API]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
 sidebar:
@@ -13,6 +13,8 @@ sidebar:
 {: .notice--info}
 
 # API Routes란?
+
+- [REST API가 뭔가요?](https://youtu.be/iOueE9AXDQQ){% include video id="iOueE9AXDQQ" provider="youtube" %}
 
 - `API(Application Programming Interface)`는 API는 컴퓨터나 컴퓨터 프로그램 사이의 연결이다. 일종의 소프트웨어 인터페이스이며 다른 종류의 소프트웨어에 서비스를 제공한다. 이러한 연결이나 인터페이스를 빌드하거나 사용하는 방법을 기술하는 문서나 표준은 API 사양으로 부른다.쉽게 말해 사용자와 상품 개발자 사이를 이어주는 `사용설명서`라고 보면 된다. 인터페이스는 컴퓨터나 기계간의 정보 교환하기 위한 수단이나 방법을 의미한다. `Routes`는 `경로`라는 의미로써 여기서는 `URL 경로`라고 생각하면 된다.
 
@@ -116,6 +118,7 @@ export default function handler(req, res) {
 
 #### 참고 영상
 
+- [REST API가 뭔가요?](https://youtu.be/iOueE9AXDQQ){% include video id="iOueE9AXDQQ" provider="youtube" %}
 - [Next js 강좌 #7 API Routes, 로그인 구현](https://youtu.be/R-IAWcTpNO4){% include video id="R-IAWcTpNO4" provider="youtube" %}
 - [Next.js Tutorial - 41 - API Routes](https://youtu.be/aZkZUduCauo){% include video id="aZkZUduCauo" provider="youtube" %}
 - [Nextjs Tutorial #3 - API Routes](https://youtu.be/_tXDsZmcjeI){% include video id="R_tXDsZmcjeI" provider="youtube" %}
@@ -124,6 +127,7 @@ export default function handler(req, res) {
 
 - [API Routes 공식홈페이지](https://nextjs.org/docs/api-routes/introduction)
 - [NextJS API Routes](https://serzhul.io/REACT/nextjs-api-routes/)
+- [Next.js 공식 Docs 흝기](https://velog.io/@baramofme/Next.js-%EA%B3%B5%EC%8B%9D-Docs-%ED%9D%9D%EA%B8%B0#api-routes)
 
 [상단으로](#예시){: .btn .btn--primary}
 [푸샤 깃허브 이동](https://github.com/de24world){: .btn .btn--info}
