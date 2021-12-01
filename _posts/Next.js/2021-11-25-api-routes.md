@@ -2,7 +2,18 @@
 layout: single
 title: "Next.js API Routes"
 categories: Next.js
-tag: [Next.js, API, Routes, Dynamic API Routes, Rest API]
+tag:
+  [
+    Next.js,
+    API,
+    Routes,
+    Dynamic API Routes,
+    Rest API,
+    parameter,
+    query,
+    object,
+    array,
+  ]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
 sidebar:
@@ -115,6 +126,37 @@ export default function handler(req, res) {
   - `/api/posts/index.js`
   - `/api/posts/[postId].js`
     둘 다 같습니다. 세번째 옵션으로 오직 `/api/posts/[postId].js`만 쓰는 것은 유효하지 않은데, 왜냐하면 Dynamic Routes(모든 routes 포함 - 아래 참조)에는 `undefined` 상태와 `GET api/posts`는 어떠한 상황에서도 `/api/posts/[postId].js` 매칭 시켜주지 않기 때문입니다.
+
+## 모든 API routes 읽기(catch)
+
+API routes는 대괄호 안에 세 개의 점(`...`)을 추가하여 모든 경로를 읽을 수 있도록 확장할 수 있습니다. 예:
+
+- `pages/api/post/[...slug].js`는 `/api/post/a` 뿐만 아니라 `/api/post/a/b`, `/api/post/a/b/c` 등등 매칭이 됩니다.
+
+참조 : `slug` 이외의 이름을 `[...param]`와 같이 지을 수 있습니다.
+
+일치하는 매개변수(parameter)는 query parameter(예시에 있는 `slug`)로 페이지에 전송되며, 항상 배열이 되며, 경로(path) `/api/post/a`에는 다음 `query` 객체(object)가 있습니다.
+
+```js
+{ "slug": ["a"] }
+```
+
+`/api/post/a/b` 경우, 그리고 다른 매칭되는 경로는, 새로운 parameter들이 추가되어 다음과 같은 배열(array)이 됩니다:
+
+```js
+{ "slug": ["a", "b"] }
+```
+
+`pages/api/post/[...slug].js`의 API route는 다음과 같습니다.
+
+```js
+export default function handler(req, res) {
+  const { slug } = req.query;
+  res.end(`Post: ${slug.join(", ")}`);
+}
+```
+
+이제, `api/post/a/b/c`에 대한 요청(request)는 `Post: a, b, c`의 text로 응답(response)될 것입니다.
 
 #### 참고 영상
 
