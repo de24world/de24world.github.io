@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "HTTP Protocol 설명 사이트 및 영상"
-categories: coding
+categories: Web
 tag: [HTTP, Protocol, Web, request, response]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
