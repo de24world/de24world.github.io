@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Avoid an excessive DOM size"
+title: "webpage speed up"
 categories: Web-Performance
 tag: [DOM, lazy-loading, infinite-scrolling, content-visibility]
 toc: true # table of content 콘텐츠 목록

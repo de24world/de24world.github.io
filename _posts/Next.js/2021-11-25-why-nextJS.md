@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "샘플 타이틀"
+title: " why nextJS"
 categories: coding
 tag: [python, backend, sample]
 toc: true # table of content 콘텐츠 목록
