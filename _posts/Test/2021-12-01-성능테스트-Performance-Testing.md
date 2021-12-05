@@ -99,7 +99,6 @@ Volume testing은 처리해야 할 많은 양의 데이터를 가진 애플리�
 - [소프트웨어 성능 테스트 요구 사항 및 필수 구성 요소](https://blog.naver.com/PostView.nhn?blogId=ki630808&logNo=222147614041)
 - [성능테스트의 유형](https://softwareqalab.tistory.com/58)
 - [SW 성능 테스트 실무의 이해 - 네이버 블로그](https://blog.naver.com/PostView.nhn?blogId=wisestone2007&logNo=222071631718&categoryNo=44&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=search)
-
 - [웹 사이트 스트레스 테스트를위한 7 가지 성능 테스트 도구](https://www.webhostingsecretrevealed.net/ko/blog/web-tools/load-testing-tools/)
 - [Flood Element 개발자 블로그](https://notes.nicolevanderhoeven.com/Fork+My+Brain)
 
