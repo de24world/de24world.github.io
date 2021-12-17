@@ -29,7 +29,9 @@ sidebar:
 
 #### 참조 문서 및 사이트
 
-- []()
+- [리덕스 한글 공식문서](https://ko.redux.js.org/redux-toolkit/overview)
+- [리덕스툴킷 공식홈페이지](https://redux-toolkit.js.org/introduction/getting-started)
+- [리덕스 github](https://github.com/reduxjs/redux-toolkit)
 
 [상단으로](#svg-란){: .btn .btn--primary}
 [푸샤 깃허브 이동](https://github.com/de24world){: .btn .btn--info}
