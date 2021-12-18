@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "why nextJS"
+title: "next-redux-wrapper"
 categories: Next.js
-tag: [python, backend, sample]
+tag: [next.js, react, redux, 넥스트js, 리액트, 리덕스]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
 sidebar:
@@ -29,8 +29,7 @@ sidebar:
 
 #### 참조 문서 및 사이트
 
-- [](https://ivorycode.tistory.com/entry/Nextjs%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0)
-- [](https://ohhako.github.io/kimhako/articles/2020-11/Nextjs-attractive-post)
+- []()
 
 [상단으로](#svg-란){: .btn .btn--primary}
 [푸샤 깃허브 이동](https://github.com/de24world){: .btn .btn--info}

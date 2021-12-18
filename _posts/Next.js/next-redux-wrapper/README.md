@@ -69,7 +69,7 @@ npm install next-redux-wrapper react-redux --save
 
 예시: https://codesandbox.io/s/next-redux-wrapper-demo-7n2t5.
 
-모든 예시들은 Typoescript로 쓰여졌습니다. 만약 Javascript만 사용하고 있다면 타입을 유형을 선언하세요. 이 예시들은 바닐라 Redux 로 되어있으며, 만약 Redux Toolkit을 사용하고 있다면 [dedicated example](#redux-toolkit) 참조하세요.
+모든 예시들은 Typescript로 쓰여졌습니다. 만약 Javascript만 사용하고 있다면 타입을 유형을 선언하세요. 이 예시들은 바닐라 Redux 로 되어있으며, 만약 Redux Toolkit을 사용하고 있다면 [dedicated example](#redux-toolkit) 참조하세요.
 
 Next.js 는 여러 데이터를 fetching 해주는 메카니즘을 가지고 있으며, 이 라이브러리는 어느 것이나 붙여서 사용할 수 있습니다. 그러나 먼저 몇 가지 일반적인 코드를 작성해야합니다.
 
