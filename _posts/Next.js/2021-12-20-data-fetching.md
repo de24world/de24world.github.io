@@ -30,6 +30,7 @@ sidebar:
 #### 참조 문서 및 사이트
 
 - [Data fetching (서버사이드와 클라이언트 사이드 조합)](<https://serzhul.io/REACT/data-fetching-(%EC%84%9C%EB%B2%84%EC%82%AC%EC%9D%B4%EB%93%9C%EC%99%80-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-%EC%82%AC%EC%9D%B4%EB%93%9C-%EC%A1%B0%ED%95%A9)/>)
+- [](https://cpro95.tistory.com/492)
 
 [상단으로](#svg-란){: .btn .btn--primary}
 [푸샤 깃허브 이동](https://github.com/de24world){: .btn .btn--info}
