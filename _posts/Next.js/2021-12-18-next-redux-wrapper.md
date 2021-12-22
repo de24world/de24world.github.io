@@ -39,21 +39,21 @@ A HOC that brings Next.js and Redux together
   - [getServerSideProps](#getserversideprops)
   - [Page.getInitialProps](#pagegetinitialprops)
   - [App](#app)
-  - [App and getServerSideProps or getStaticProps at page level](#app-and-getserversideprops-or-getstaticprops-at-page-level)
-- [How it works](#how-it-works)
-- [Tips and Tricks](#tips-and-tricks)
+  - [페이지 레벨에서의 App 그리고 getServerSideProps 혹은 getStaticProps ](#app-and-getserversideprops-or-getstaticprops-at-page-level)
+- [어떻게 작동하나](#how-it-works)
+- [팁과 요령](#tips-and-tricks)
   - [Redux Toolkit](#redux-toolkit)
-  - [Server and Client state separation](#server-and-client-state-separation)
-  - [Document](#document)
-  - [Error Pages](#error-pages)
-  - [Async actions](#async-actions)
-  - [Custom serialization and deserialization](#custom-serialization-and-deserialization)
-  - [Usage with Redux Saga](#usage-with-redux-saga)
-  - [Usage with Redux Persist](#usage-with-redux-persist)
-- [Upgrade from 6.x to 7.x](#upgrade-from-6x-to-7x)
-- [Upgrade from 5.x to 6.x](#upgrade-from-5x-to-6x)
-- [Upgrade from 1.x to 2.x](#upgrade-from-1x-to-2x)
-- [Resources](#resources)
+  - [서버와 클라이언트 상태 분리](#server-and-client-state-separation)
+  - [문서](#document)
+  - [에러 페이지](#error-pages)
+  - [비동기 작업(Async actions)](#async-actions)
+  - [사용자 정의 직렬화 및 역직렬화(Custom serialization and deserialization)](#custom-serialization-and-deserialization)
+  - [리덕스 사가와 사용법](#usage-with-redux-saga)
+  - [리덕스 Persist와 사용법](#usage-with-redux-persist)
+- [6.x to 7.x의 업그레이드](#upgrade-from-6x-to-7x)
+- [5.x to 6.x의 업그레이드](#upgrade-from-5x-to-6x)
+- [1.x to 2.x의 업그레이드](#upgrade-from-1x-to-2x)
+- [리소스](#resources)
 
 # 왜?
 
@@ -87,7 +87,7 @@ npm install next-redux-wrapper react-redux --save
 
 Next.js 는 여러 데이터를 fetching 해주는 메카니즘을 가지고 있으며, 이 라이브러리는 어느 것이나 붙여서 사용할 수 있습니다. 그러나 먼저 몇 가지 일반적인 코드를 작성해야합니다.
 
-**Please note that your reducer _must_ have the `HYDRATE` action handler. `HYDRATE` action handler must properly reconciliate the hydrated state on top of the existing state (if any).** This behavior was added in version 6 of this library. We'll talk about this special action later.
+**리듀서(reducer)에는 반드시 `HYDRATE` 액션 핸들러(action handler)가 있어야 합니다. `HYDRATE` 액션 핸들러는 반드시 기존 상태(있는 경우) 위에 있는 수화(hydrated) 상태를 적절하게 조정해야 합니다** 이 동작은 해당 라이브러리 6 버전에 추가되었습니다. 특별한 액션에 대해서 조금 있다가 자세하게 이야기해보도록 하겠습니다.
 
 다음와 같은 파일을 만들어주세요. `store.ts`:
 
