@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "Cypress와 Playwright 비교"
+title: "Playwright"
 categories: Test
-tag: [e2e, backend, sample]
+tag: [e2e, Playwright, Testing]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
 sidebar:
