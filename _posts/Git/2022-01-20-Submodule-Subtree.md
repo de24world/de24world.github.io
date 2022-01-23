@@ -87,14 +87,29 @@ git submodule [--quiet] absorbgitdirs [--] [<path>…​]
 
 <img src="/assets/images/Git/subtree.png" />
 
-# 서브모듈 vs Subtree
+# Submodule vs Subtree
+
+## Submodule
+
+- Submodule은 CBD(component-based development)에 적합한 모델이며, 메인 프로젝트는 다른 컴포넌트들에 의존적이다.
+- Submodule은 링크이다.
+- Submoudle은 저장소를 여러개의 작은 저장소로 나눌때 사용한다. 만약 서브 모듈에서 변경을 한다면 서브 모듈 안에서 커밋/푸쉬를 한 후에 메인 저장소(슈퍼 프로젝트)에서 한번 더 커밋/푸쉬를 해야 한다.
+
+## Subtree
+
+- Subtree는 SBD(system-based development)에 더욱 가까우며, 모든 저장소는 모든것을 포함하고 있으며 각 부분을 수정 가능하다.
+- Subtree는 복사다.
+- Subtree를 사용하면 다른 저장소를 하나의 저장소로 이력과 함께 통합할수 있다. 통합을 하게 된다면 저장소의 크기는 커지지만 코드와 이력을 재 사용하기에는 더욱 좋다. 결국 히스토리를 관리하기에 좋다.
 
 <div class="notice--success">
 <h2>요약</h2>
 <ul>
-  <li>1. </li>
-  <li>2. </li>
-  <li>3. </li>
+  <li>Subtree는 외부 저장소를 복제하므로 기본 저장소에서 사용할 수 있다.</li>
+  <li>Submodule은 외부 저장소를 복제하고 메인 저장소에서 참조 할 때 링크를 사용한다.</li>
+  <li>사용자는 Subtree를 사용하여 외부 저장소를 편집 할 수 있다.</li>
+  <li>외부 저장소가 변경되면 기본 저장소의 Submodule을 직접 업데이트해야한다.</li>
+  <li>팀 프로젝트에 Subtree가 좀 더 효율적이나 공용 소스 코드의 수정에 기준을 세워야한다.</li>
+  <li>외부 저장소가 서브 개념으로 작고 업데이트가 적은 저장소라면 Submodule이, 그렇지 않고 외부 저장소가 메인저장소처럼 규모가 크고 변화가 많다면 Subtree가 적당할듯?</li>
 </ul>
 </div>
 
@@ -106,6 +121,7 @@ git submodule [--quiet] absorbgitdirs [--] [<path>…​]
 
 - [7.11 Git 도구 - 서브모듈](https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%EC%84%9C%EB%B8%8C%EB%AA%A8%EB%93%88) -[[Git] Submodule / Subtree](https://machine-geon.tistory.com/167)
 - [[Git] Subtree 사용법](https://www.three-snakes.com/git/git-subtree)
+- [[Git] Submodule / Subtree](https://machine-geon.tistory.com/167)
 
 [상단으로](#svg-란){: .btn .btn--primary}
 [푸샤 깃허브 이동](https://github.com/de24world){: .btn .btn--info}
