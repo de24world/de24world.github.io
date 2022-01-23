@@ -104,7 +104,8 @@ git submodule [--quiet] absorbgitdirs [--] [<path>…​]
 
 #### 참조 문서 및 사이트
 
-- [7.11 Git 도구 - 서브모듈](https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%EC%84%9C%EB%B8%8C%EB%AA%A8%EB%93%88)
+- [7.11 Git 도구 - 서브모듈](https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%EC%84%9C%EB%B8%8C%EB%AA%A8%EB%93%88) -[[Git] Submodule / Subtree](https://machine-geon.tistory.com/167)
+- [[Git] Subtree 사용법](https://www.three-snakes.com/git/git-subtree)
 
 [상단으로](#svg-란){: .btn .btn--primary}
 [푸샤 깃허브 이동](https://github.com/de24world){: .btn .btn--info}
