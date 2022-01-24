@@ -87,6 +87,10 @@ git submodule [--quiet] absorbgitdirs [--] [<path>…​]
 
 <img src="/assets/images/Git/subtree.png" />
 
+- 메인(상위) 프로젝트에 다른 repository 프로젝트를 가져와서 사용할 경우 하나의 repository 로 통합 관리를 할 수 있게 해준다.
+
+- 메인(상위) 프로젝트에서 하위 repository 까지 한번에 push/pull 을 할 수 있고 하위 repository만 따로 Push/Pull 도 가능하다.
+
 # Submodule vs Subtree
 
 ## Submodule

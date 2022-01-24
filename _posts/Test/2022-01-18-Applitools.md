@@ -39,6 +39,8 @@ sidebar:
 #### 참조 문서 및 사이트
 
 - [시각적 회귀 테스트](https://ko.myservername.com/guide-visual-regression-testing-with-visual-testing-tools#1_Applitools)
+- [시각적 회귀 테스트 (Visual Regression Test)](https://ideveloper2.dev/blog/2021-01-24--%EC%8B%9C%EA%B0%81%EC%A0%81-%ED%9A%8C%EA%B7%80-%ED%85%8C%EC%8A%A4%ED%8A%B8-visual-regression-test/)
+- [@applitools/eyes-playwright](https://www.npmjs.com/package/@applitools/eyes-playwright)
 
 [상단으로](#svg-란){: .btn .btn--primary}
 [푸샤 깃허브 이동](https://github.com/de24world){: .btn .btn--info}
