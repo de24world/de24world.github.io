@@ -23,6 +23,20 @@ sidebar:
 
 <img src="/assets/images/CLS/width_height.gif" />
 
+## ClassicRunner
+
+## VisualGridRunner(Ultrafast Grid)
+
+- 실제적으로 useragent 페이지 확인하면 실질적인 브라우저 및 디바이스가 정확하지 않았다. [useragent 확인 사이트](http://httpbin.org/headers). 그래서 Playwright에서 emulate하여 이 문제를 해결하였다. (ClassicRunner 활용)
+- 유료
+
+## 요금제
+
+- Starter : 공짜, ClassicRunner
+- Enterprise :
+- Ultrafast :
+  [](https://applitools.com/pricing/)
+
 <div class="notice--success">
 <h2>요약</h2>
 <ul>
