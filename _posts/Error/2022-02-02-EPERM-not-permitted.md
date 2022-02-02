@@ -1,0 +1,34 @@
+---
+layout: single
+title: "Error: EPERM: operation not permitted"
+categories: Error
+tag: [EPERM, Node.js, Javascript, Error]
+toc: true # table of content 콘텐츠 목록
+author_profile: false
+sidebar:
+  nav: "docs"
+---
+
+**[공지사항]** [푸샤 깃허브 블로그 업데이트 사항](https://github.com/de24world/de24world.github.io)
+{: .notice--info}
+
+# Error: EPERM: operation not permitted 에러 현상
+
+만약 윈도우 된 컴퓨터로 개발 작업을 하다보면 npm install 혹은 build 시에 `Error: EPERM: operation not permitted` 관련 에러가 발생하게 된다. 해당 에러는 회말그대로 권한이 없다보니 발생하는 에러라서 npm 권한 설정을 해줘야 한다. (보통 보안 문제로 제한된 권한이 설정된 유저로 입력해야하는 회사 컴퓨터에서 많이 발생하는 문제같다)
+
+# 해결 방법
+
+1. 먼저 관리자 권한으로 명령 프롬포트를 실행한다. (윈도우 키를 눌러 명령 프롬포트 찾아서 아이콘을 우측 마우스로 클릭해서 관리자 권한으로 실행)
+
+2. 해당 명령어를 입력해준다.
+
+```
+npm config set prefix C:\Users\<username>\AppData\Roaming\npm
+```
+
+#### 참조 문서 및 사이트
+
+- [[Solved] npm – EPERM: operation not permitted on Windows](https://flutterq.com/solved-npm-eperm-operation-not-permitted-on-windows/)
+
+[상단으로](#svg-란){: .btn .btn--primary}
+[푸샤 깃허브 이동](https://github.com/de24world){: .btn .btn--info}
