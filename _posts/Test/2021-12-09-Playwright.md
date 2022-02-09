@@ -157,7 +157,7 @@ export default config;
 
 #### 참조 문서 및 사이트
 
-- [Playwright vs Cypress](https://youtu.be/idX9hSW0MY4)
+- [추천 Udemy 강좌](https://computeruniverse.udemy.com/course/automated-software-testing-with-playwright)
 - [Playwright로 E2E 테스트 작성하기](https://ui.toast.com/weekly-pick/ko_20210818)
 
 [상단으로](#svg-란){: .btn .btn--primary}
