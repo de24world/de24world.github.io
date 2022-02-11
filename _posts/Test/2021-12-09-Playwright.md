@@ -15,16 +15,17 @@ sidebar:
 <img src="/assets/images/CLS/width_height.gif" />
 
 ```js
+// playwright.config.js
 import { PlaywrightTestConfig, devices } from "@playwright/test";
 
 /**
- * See https://playwright.dev/docs/test-configuration.
+ * 참조 : https://playwright.dev/docs/test-configuration.
  */
 const config: PlaywrightTestConfig = {
   testDir: "./e2e/tests",
 
-  /* Maximum time one test can run for. */
-  timeout: 180 * 1000,
+  /* 한 나의 테스트를 실행할 수 있는 최대시간 - 아래는 30초로 되어있으나 긴 시나리오 테스트의 경우 더 길게 설정하면 된다. 아니면 에러가 발생*/
+  timeout: 30 * 1000,
 
   expect: {
     /**
@@ -44,7 +45,11 @@ const config: PlaywrightTestConfig = {
   workers: process.env.CI ? 1 : undefined,
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [["list"], ["html"]],
+  reporter: [
+    ["list"],
+    ["html", { outputFolder: "./e2e/reports/html" }],
+    ["json", { outputFile: "./e2e/reports/json/results.json" }],
+  ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -59,22 +64,11 @@ const config: PlaywrightTestConfig = {
 
     /* https://playwright.dev/docs/test-configuration#automatic-screenshots */
     screenshot: "only-on-failure",
-    video: process.env.CI ? undefined : "retain-on-failure",
+    video: process.env.CI ? undefined : "on",
   },
 
   /* Configure projects for major browsers */
   projects: [
-    // {
-    //     name: 'applitools',
-    //     testMatch: [/.*applitools.spec.ts/],
-    //     /* Project-specific settings. */
-    //     use: {
-    //         ...devices['Desktop Chrome'],
-    //         ...devices['Desktop Firefox'],
-    //         ...devices['Pixel 4'],
-    //         ...devices['iPhone 11'],
-    //     },
-    // },
     {
       name: "chromium",
       testMatch: [/.*all.spec.ts/, /.*desktop.spec.ts/, /.*chrome.spec.ts/],
@@ -131,13 +125,13 @@ const config: PlaywrightTestConfig = {
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
-  // outputDir: 'test-results/',
+  outputDir: "./tests/e2e/reports",
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //     command: 'yarn start:prod',
-  //     port: 3000,
-  // },
+  webServer: {
+    command: "yarn start",
+    port: 3000,
+  },
 };
 export default config;
 ```
