@@ -29,8 +29,8 @@ const config: PlaywrightTestConfig = {
 
   expect: {
     /**
-     * Maximum time expect() should wait for the condition to be met.
-     * For example in `await expect(locator).toHaveText();`
+     * 최대 시간 expect()는 조건이 충족될 때까지 기다려야 합니다.
+     * 예를 들어 `await expect(locator).toHaveText();`
      */
     timeout: 5000,
   },

@@ -62,6 +62,7 @@ CDN 에지 서버 는 하나 이상의 원본 서버의 부하를 줄이기 위�
 #### 참조 문서 및 사이트
 
 - [What is a CDN edge server?](https://www.cloudflare.com/de-de/learning/cdn/glossary/edge-server/)
+- [클라우드플레어(Cloudflare) 란? SSL 이란?](https://blog.naver.com/PostView.naver?blogId=appcomo&logNo=221687988205&redirect=Dlog&widgetTypeCall=true&directAccess=false)
 
 [상단으로](#svg-란){: .btn .btn--primary}
 [푸샤 깃허브 이동](https://github.com/de24world){: .btn .btn--info}
