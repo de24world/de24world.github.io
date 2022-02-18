@@ -35,31 +35,31 @@ const config: PlaywrightTestConfig = {
     timeout: 5000,
   },
 
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
+  /* 실수로 소스 코드에 test.only를 남겨둔 경우 CI(Continuous Integration, Git Workflow 등)에서 빌드 실패. */
   forbidOnly: !!process.env.CI,
 
-  /* Retry on CI only */
+  /* CI에서만 테스트를 재시도 하려고 할 때 참조 : https://playwright.dev/docs/api/class-testconfig#test-config-retries*/
   retries: process.env.CI ? 1 : 0,
 
-  /* Opt out of parallel tests on CI. */
+  /* CI에 대한 병렬(parallel) 테스트 옵트아웃. 참조 : https://playwright.dev/docs/api/class-testconfig#test-config-workers */
   workers: process.env.CI ? 1 : undefined,
 
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
+  /* 보고 사용 방법. 참조 https://playwright.dev/docs/test-reporters */
   reporter: [
     ["list"],
     ["html", { outputFolder: "./e2e/reports/html" }],
     ["json", { outputFile: "./e2e/reports/json/results.json" }],
   ],
 
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  /* 아래의 모든 프로젝트에 대한 공유 설정. 참조 : https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
+    /* `click()`과 같은 각 작업에 소요될 수 있는 최대 시간입니다. 기본값은 0(제한 없음). */
     actionTimeout: 30 * 1000,
 
-    /* Base URL to use in actions like `await page.goto('/')`. */
+    /* `await page.goto('/')` 와 같은 작업에서 사용할 기본 URL. */
     baseURL: "http://localhost:3000/",
 
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    /* 실패한 테스트 재시도 시 추적 수집. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
 
     /* https://playwright.dev/docs/test-configuration#automatic-screenshots */
@@ -67,7 +67,7 @@ const config: PlaywrightTestConfig = {
     video: process.env.CI ? undefined : "on",
   },
 
-  /* Configure projects for major browsers */
+  /* 주요 브라우저용 프로젝트 구성 */
   projects: [
     {
       name: "chromium",
@@ -93,7 +93,7 @@ const config: PlaywrightTestConfig = {
     //   },
     // },
 
-    /* Test against mobile viewports. */
+    /* 모바일 뷰포트에 대한 테스트. */
     {
       name: "Mobile Chrome",
       testMatch: [/.*all.spec.ts/, /.*mobile.spec.ts/],
@@ -109,7 +109,7 @@ const config: PlaywrightTestConfig = {
       },
     },
 
-    /* Test against branded browsers. */
+    /* 브랜드 브라우저에 대한 테스트. */
     // {
     //   name: 'Microsoft Edge',
     //   use: {
@@ -124,10 +124,10 @@ const config: PlaywrightTestConfig = {
     // },
   ],
 
-  /* Folder for test artifacts such as screenshots, videos, traces, etc. */
+  /* 스크린샷, 비디오, 추적 등과 같은 테스트 아티팩트를 위한 폴더. */
   outputDir: "./tests/e2e/reports",
 
-  /* Run your local dev server before starting the tests */
+  /* 테스트를 시작하기 전에 로컬 개발 서버를 실행하세요. */
   webServer: {
     command: "yarn start",
     port: 3000,
@@ -139,7 +139,7 @@ export default config;
 <div class="notice--success">
 <h2>요약</h2>
 <ul>
-  <li>1. </li>
+  <li>Playwright는 Puppeteer와 유사하며 다른 브라우저 선택 가능하고, 다른 언어를 지원한다</li>
   <li>2. </li>
   <li>3. </li>
 </ul>
@@ -153,6 +153,7 @@ export default config;
 
 - [추천 Udemy 강좌](https://computeruniverse.udemy.com/course/automated-software-testing-with-playwright)
 - [Playwright로 E2E 테스트 작성하기](https://ui.toast.com/weekly-pick/ko_20210818)
+- [Navigating & waiting](https://www.checklyhq.com/learn/headless/basics-navigation/)
 
 [상단으로](#svg-란){: .btn .btn--primary}
 [푸샤 깃허브 이동](https://github.com/de24world){: .btn .btn--info}
