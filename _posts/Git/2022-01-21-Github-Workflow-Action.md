@@ -12,6 +12,10 @@ sidebar:
 **[공지사항]** [푸샤 깃허브 블로그 업데이트 사항](https://github.com/de24world/de24world.github.io)
 {: .notice--info}
 
+# Github Actions 개요?
+
+GitHub Actions는 빌드, 테스트 및 배포 파이프라인을 자동화할 수 있는 CI/CD(지속적 통합 및 지속적 전달) 플랫폼입니다. Repository에 대한 모든 pull request들을 빌드 및 테스트하거나 병합된 pull request들을 프로덕션에 배포하는 워크플로를 만들 수 있습니다.
+
 <img src="/assets/images/CLS/width_height.gif" />
 
 <div class="notice--success">
@@ -25,7 +29,8 @@ sidebar:
 
 #### 참고 영상
 
-- [Github 블로그](https://youtu.be/q0P3TSoVNDM){% include video id="q0P3TSoVNDM" provider="youtube" %}
+- [GitHub Actions - Supercharge your GitHub Flow](https://youtu.be/cP0I9w2coGU){% include video id="cP0I9w2coGU" provider="youtube" %}
+- [github.com - action](https://youtu.be/uBOdEEzjxzE){% include video id="uBOdEEzjxzE" provider="youtube" %}
 
 #### 참조 문서 및 사이트
 
