@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "샘플 타이틀"
-categories: coding
-tag: [python, backend, sample]
+title: "cannot be loaded because running scripts is disabled on this system"
+categories: Error
+tag: [Error, fwlink, microsoft, yarn, npm]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
 sidebar:
@@ -12,22 +12,24 @@ sidebar:
 **[공지사항]** [푸샤 깃허브 블로그 업데이트 사항](https://github.com/de24world/de24world.github.io)
 {: .notice--info}
 
-<img src="/assets/images/Error/error_terminal.png" />
+
+만약 보안문제로 윈도우 계정 로그인해야하는 회사(공용) 컴퓨터 혹은 노트북의 경우 Visual Studio Code의 Terminal에서 `npm`이나 `yarn` 패키지 설치 혹은 실행하려고 하면 아래의 에러 메세지가 뜬다.
 
 ```
 yarn : File C:\Users\...\AppData\Roaming\npm\yarn.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
 
 ```
 
-<div class="notice--success">
-<h2>요약</h2>
-<ul>
-  <li>1. </li>
-  <li>2. </li>
-  <li>3. </li>
-</ul>
-</div>
+이럴 경우 아래의 과정데로 실행해보자.
 
+1.  window PowerShell 프로그램을 관리자 권한으로 실행한다.
+<img src="/assets/images/Error/window-powershell.png"/>
+
+2. `Get-ExecutionPolicy` 명령어를 실행해본다. 만약 `RemoteSigned`이 아니라 `Restricted`로 되어 있다면 권한을 변경하자.
+
+3. `Set-ExecutionPolicy RemoteSigned` 입력하고 다시 `Get-ExecutionPolicy` 입력해서 `RemoteSigned`로 변경되었는지 확인해본다.
+
+4. 변경되었다면 이제 Terminal에서 package 명령어 실행될 것이다.
 
 #### 참조 문서 및 사이트
 
