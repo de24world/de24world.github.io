@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "Cloudflare"
-categories: Tools
+title: "Cloudflare edge Server"
+categories: Cloudflare
 tag: [Cloudflare, CDN, edge]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
