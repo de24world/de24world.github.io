@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "Gitversion"
+title: "Gitversion, Semantic Versioning Specification (SemVer)"
 categories: Git
-tag: [Git, Version, sample]
+tag: [Git, Version, SemVer]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
 sidebar:
@@ -13,6 +13,13 @@ sidebar:
 {: .notice--info}
 
 <img src="/assets/images/CLS/width_height.gif" />
+
+```json
+package.json
+"Dependencies": {
+  "react": "17.0.2",
+}
+```
 
 <div class="notice--success">
 <h2>요약</h2>
