@@ -42,9 +42,9 @@ const config: PlaywrightTestConfig = {
   retries: process.env.CI ? 1 : 0,
 
   /* CI에 대한 병렬(parallel) 테스트 옵트아웃. 참조 : https://playwright.dev/docs/api/class-testconfig#test-config-workers */
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : 5,
 
-  /* 보고 사용 방법. 참조 https://playwright.dev/docs/test-reporters */
+  /* 보고서 사용 방법. 참조 https://playwright.dev/docs/test-reporters */
   reporter: [
     ["list"],
     ["html", { outputFolder: "./e2e/reports/html" }],
@@ -59,8 +59,8 @@ const config: PlaywrightTestConfig = {
     /* `await page.goto('/')` 와 같은 작업에서 사용할 기본 URL. */
     baseURL: "http://localhost:3000/",
 
-    /* 실패한 테스트 재시도 시 추적 수집. See https://playwright.dev/docs/trace-viewer */
-    trace: "on-first-retry",
+    /* 흔적(trace) 수집 옵션. See https://playwright.dev/docs/trace-viewer */
+    trace: process.env.CI ? "off" : "on",
 
     /* https://playwright.dev/docs/test-configuration#automatic-screenshots */
     screenshot: "only-on-failure",
