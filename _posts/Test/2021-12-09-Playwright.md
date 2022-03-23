@@ -14,6 +14,8 @@ sidebar:
 
 <img src="/assets/images/CLS/width_height.gif" />
 
+## 개인적인 `playwright.config.js` 설정 방법
+
 ```js
 // playwright.config.js
 import { PlaywrightTestConfig, devices } from "@playwright/test";
@@ -144,6 +146,37 @@ export default config;
   <li>3. </li>
 </ul>
 </div>
+
+## Playwright Test 예시
+
+개인적으로 여러번 사용되는 테스트의 경우 액션(Action)으로 분류해 사용하였다.
+
+```js
+// e2e/tests/login.all.spec.ts
+import { test } from "@playwright/test";
+import { closeConsentAction } from "@Testing/e2e/actions/consentLayer";
+import {
+  forgetPasswordAction,
+  loginFailAction,
+} from "@Testing/e2e/actions/login";
+
+test.describe.parallel(`search Enter with ${lang}`, () => {
+  test("2. Login Fail and show Error Message in /login", async ({ page }) => {
+    await page.goto(`/${lang}/login`);
+    await closeConsentAction(page);
+    await loginFailAction(page);
+  });
+});
+```
+
+```js
+// e2e/actions/consentLayer.ts
+import { expect, Page } from "@playwright/test";
+
+export async function closeConsentAction(page: Page) {
+  await page.locator("#consent-accept").click();
+}
+```
 
 #### 참고 영상
 
