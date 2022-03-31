@@ -19,9 +19,19 @@ sidebar:
 1. [Whois Look up](https://whois.domaintools.com/) - Find info about the owner of the target
    : 웹사이트의 도메인, IP 주소, 서버 타입 등의 정보를 알 수 있다.
 
-2. [Netcraft Site Report](toolbar.netcraft.com/site_report?url=) - Shows technologies used on the target
+2. [Netcraft Site Report](https://sitereport.netcraft.com/?url=) - Shows technologies used on the target
 
 3. [Robtex DNS lookup](https://www.robtex.com/) - Shows comprehensive info about the target website.
+
+4. [Maltego](https://www.maltego.com/product-features/) - Maltego is an information gathering tool that can be used to collect information about anything. To run maltego type the follwing in terminal `maltegoce`
+
+[Maltego 설치방법 in KaliLinux](https://installati.one/kalilinux/maltego/)
+
+### 같은 서버를 쓰는 웹사이트들 알아내기
+
+### Subdomain 알아내는 법
+
+칼리리눅스에서 `knockpy + url` 치면 Subdomain(예:mail.google.com) 등을 알아낼 수 있다.
 
 ## 공격 툴
 
