@@ -14,9 +14,16 @@ sidebar:
 
 <img src="/assets/images/CLS/width_height.gif" />
 
-## 설치
+# 칼리리눅스
 
-- xampp 실행법
+[칼리 리눅스 설치 과정 ① / Kali Linux installation process ①](https://information-security-vlog.tistory.com/4)
+
+- [칼리리눅스 한글 폰트 설치와 한글 입력기 설정, 한글을 자유롭게 사용~](https://youtu.be/zv9ClOSixls){% include video id="zv9ClOSixls" provider="youtube" %}
+
+칼리리눅스 비프 소리 끄기
+terminal에서 `sudo xset b off`
+
+### xampp 실행법
 
 ```
 sudo /opt/lampp/manager-linux-x64.run
