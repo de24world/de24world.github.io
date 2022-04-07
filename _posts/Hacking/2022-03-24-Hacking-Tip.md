@@ -20,8 +20,9 @@ sidebar:
 
 - [칼리리눅스 한글 폰트 설치와 한글 입력기 설정, 한글을 자유롭게 사용~](https://youtu.be/zv9ClOSixls){% include video id="zv9ClOSixls" provider="youtube" %}
 
-칼리리눅스 비프 소리 끄기
-terminal에서 `sudo xset b off`
+- [칼리리눅스 VPN 사용법](https://youtu.be/dbicbkM0Xrg){% include video id="dbicbkM0Xrg" provider="youtube" %}
+
+terminal에서 `xset b off` 혹은 `sudo rmmod pcspkr` rmmod는 모듈을 제거하는 명령어이고, pcspkr은 스피커 모듈이다. (해당 방법은 일시적인 방법, 영구적 방법 현재 필자의 칼리리눅스에 적용 안됨)
 
 ### xampp 실행법
 
@@ -167,7 +168,6 @@ Command option : 198p
 ### 참조영상
 
 [화이트해커][웹모의해킹] 9강. 웹 해킹 보안 실습용 웹 어플 DVWA 설치 : https://youtu.be/yWwlO0wuNac
-[칼리리눅스 VPN 사용법](https://youtu.be/dbicbkM0Xrg){% include video id="dbicbkM0Xrg" provider="youtube" %}
 
 <div class="notice--success">
 <h2>요약</h2>
