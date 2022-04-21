@@ -37,8 +37,8 @@ sidebar:
 <div class="notice--success">
 <h2>요약</h2>
 <ul>
-  <li>1. </li>
-  <li>2. </li>
+  <li>1. 먼저 브라우저에서 디버깅하여, 어디서 에러가 나는지 확인한다. </li>
+  <li>2. 해당 코드를 IDE에서 찾아내어 테스트해보면 수정한다</li>
   <li>3. </li>
 </ul>
 </div>
