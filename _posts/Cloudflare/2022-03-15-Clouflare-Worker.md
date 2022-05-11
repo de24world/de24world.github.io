@@ -1,8 +1,17 @@
 ---
 layout: single
-title: "Cloudflare edge Server"
+title: "Cloudflare Worker(클라우드플레어 3편)"
 categories: Cloudflare
-tag: [Cloudflare, CDN, edge]
+tag:
+  [
+    Cloudflare,
+    CDN,
+    edge,
+    Cloudflare Worker,
+    클라우드플레어,
+    Serverless,
+    서버리스,
+  ]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
 sidebar:
@@ -37,14 +46,6 @@ Workers는 Cloudflare사의 서버리스(Serverless) 컴퓨팅 서비스로, 전
 - Cold start 없음: 타사 서비스는 일정 시간동안 코드가 실행되지 않으면 다음의 첫 실행이 오래 걸리는데 Workers의 경우 이러한 문제가 없다고 한다.
 
 - Rust 공식 지원
-<div class="notice--success">
-<h2>요약</h2>
-<ul>
-  <li>1. </li>
-  <li>2. </li>
-  <li>3. </li>
-</ul>
-</div>
 
 #### 참고 영상
 

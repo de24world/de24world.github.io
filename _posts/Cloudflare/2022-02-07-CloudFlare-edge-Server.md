@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "Cloudflare edge Server"
+title: "Cloudflare edge Server(클라우드플레어 2편)"
 categories: Cloudflare
-tag: [Cloudflare, CDN, edge]
+tag: [Cloudflare, CDN, edge, 클라우드플레어]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
 sidebar:
@@ -12,19 +12,17 @@ sidebar:
 **[공지사항]** [푸샤 깃허브 블로그 업데이트 사항](https://github.com/de24world/de24world.github.io)
 {: .notice--info}
 
-# Cloudflare란
-
-## CDN edge server란 무엇인가?
+# CDN edge server란 무엇인가?
 
 [CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) edge(에지) 서버는 네트워크 의 논리적 극단 또는 "[edge](https://www.cloudflare.com/learning/serverless/glossary/what-is-edge-computing/)"에 존재하는 컴퓨터입니다. 에지 서버는 종종 개별 네트워크 간의 연결 역할을 합니다. CDN 에지 서버의 주요 목적은 콘텐츠를 요청하는 클라이언트 시스템에 최대한 가깝게 저장하여 대기 시간 을 줄이고 페이지 로드 시간을 개선하는 것입니다.
 
 에지 서버는 네트워크에 진입점을 제공하는 에지 장치 유형입니다. 다른 에지 장치에는 라우터와 라우팅 스위치가 있습니다. 에지 장치는 종종 다른 네트워크가 연결하고 전송을 공유할 수 있도록 인터넷 교환 지점(IxP) 내부에 배치됩니다.
 
-### 에지 서버는 어떻게 작동할까?
+## 에지 서버는 어떻게 작동할까?
 
 특정 네트워크 레이아웃에서 여러 장치가 미리 정의된 하나 이상의 네트워크 패턴을 사용하여 서로 연결됩니다. 네트워크가 다른 네트워크나 더 큰 인터넷에 연결하려는 경우 트래픽이 한 위치에서 다른 위치로 흐르도록 하려면 일종의 브리지가 있어야 합니다. 네트워크 에지에서 이 브리지를 생성하는 하드웨어 장치를 에지 장치라고 합니다.
 
-#### 네트워크는 에지에서 연결됩니다.
+### 네트워크는 에지에서 연결됩니다.
 
 많은 장치가 연결된 일반적인 가정 또는 사무실 네트워크에서 휴대폰이나 컴퓨터와 같은 장치는 허브 앤 스포크 네트워크 모델을 통해 네트워크에 연결 및 연결 해제됩니다. 모든 장치는 동일한 LAN(Local Area Network) 내에 존재하며 각 장치는 중앙 라우터에 연결되어 서로 연결할 수 있습니다.
 
@@ -45,19 +43,6 @@ CDN 공급자는 여러 위치에 서버를 배치하지만 가장 중요한 일
 [오리진 서버](https://www.cloudflare.com/ko-kr/learning/cdn/glossary/origin-server/)는 웹 속성이 CDN을 사용하지 않을 때 모든 인터넷 트래픽을 수신하는 웹 서버입니다. CDN 없이 원본 서버를 사용한다는 것은 각 인터넷 요청이 세계 어디에 있든 상관없이 원본 서버의 물리적 위치로 반환되어야 함을 의미합니다. 이렇게 하면 서버가 요청하는 클라이언트 시스템에서 멀어지는 만큼 로드 시간이 늘어납니다.
 
 CDN 에지 서버 는 하나 이상의 원본 서버의 부하를 줄이기 위해 전략적 위치에 콘텐츠를 저장([캐시](https://www.cloudflare.com/ko-kr/learning/cdn/what-is-caching/))합니다. 이미지, HTML 및 JavaScript 파일(및 잠재적으로 다른 콘텐츠)과 같은 정적 자산(assets)을 요청하는 클라이언트 시스템에 최대한 가깝게 이동함으로써 에지 서버 캐시는 웹 리소스가 로드되는 데 걸리는 시간을 줄일 수 있습니다. 원본 서버는 CDN을 사용할 때 여전히 중요한 기능을 가지고 있습니다. 인증에 사용되는 해시된 클라이언트 자격 증명의 데이터베이스와 같은 중요한 [서버 측](https://www.cloudflare.com/ko-kr/learning/serverless/glossary/client-side-vs-server-side/) 코드가 일반적으로 원본에서 유지되기 때문입니다. 전 세계에 에지 서버 가 있는 [Cloudflare CDN](https://www.cloudflare.com/ko-kr/cdn/)에 대해 알아보십시오.
-
-<div class="notice--success">
-<h2>요약</h2>
-<ul>
-  <li>1. </li>
-  <li>2. </li>
-  <li>3. </li>
-</ul>
-</div>
-
-#### 참고 영상
-
-- [Github 블로그](https://youtu.be/q0P3TSoVNDM){% include video id="q0P3TSoVNDM" provider="youtube" %}
 
 #### 참조 문서 및 사이트
 
