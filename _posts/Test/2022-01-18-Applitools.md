@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Applitools"
-categories: coding
+categories: Test
 tag:
   [
     Applitools,
