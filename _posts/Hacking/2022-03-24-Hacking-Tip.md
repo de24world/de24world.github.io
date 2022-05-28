@@ -14,16 +14,6 @@ sidebar:
 
 <img src="/assets/images/CLS/width_height.gif" />
 
-# 칼리리눅스
-
-[칼리 리눅스 설치 과정 ① / Kali Linux installation process ①](https://information-security-vlog.tistory.com/4)
-
-- [칼리리눅스 한글 폰트 설치와 한글 입력기 설정, 한글을 자유롭게 사용~](https://youtu.be/zv9ClOSixls){% include video id="zv9ClOSixls" provider="youtube" %}
-
-- [칼리리눅스 VPN 사용법](https://youtu.be/dbicbkM0Xrg){% include video id="dbicbkM0Xrg" provider="youtube" %}
-
-terminal에서 `xset b off` 혹은 `sudo rmmod pcspkr` rmmod는 모듈을 제거하는 명령어이고, pcspkr은 스피커 모듈이다. (해당 방법은 일시적인 방법, 영구적 방법 현재 필자의 칼리리눅스에 적용 안됨)
-
 ### xampp 실행법
 
 ```
