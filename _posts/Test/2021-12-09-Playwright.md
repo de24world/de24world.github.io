@@ -14,6 +14,14 @@ sidebar:
 
 <img src="/assets/images/CLS/width_height.gif" />
 
+## 왜 Playwright인가?
+
+- 모바일 환경에서도 테스트할 수 있다.
+- 여러 테스트를 동시에 돌릴 수 있다
+- 멀티탭과 프레임을 지원한다 -[Playwright vs Cypress](https://medium.com/sparebank1-digital/playwright-vs-cypress-1e127d9157bd)
+
+# Playwright 사용법
+
 ## 개인적인 `playwright.config.js` 설정 방법
 
 ```js
