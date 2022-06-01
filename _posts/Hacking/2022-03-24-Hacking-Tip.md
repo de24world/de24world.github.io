@@ -24,6 +24,8 @@ sudo /opt/lampp/manager-linux-x64.run
 
 해킹에 앞서 Target에 대한 정보를 수집하는 것이 중요한데, 여러가지 Tools들을 이용하여 정보를 수집할 수 있다. 수집한 정보를 이용하여 Target의 취약점을 분석하고 공격할 수 있는 방법을 늘린다. 알아낼 수 있는 정보들로는 DNS 정보 수집, 네트워크 정보 수집, 호스트 정보 수집, OS 정보 수집, 서비스 목록화, 네트워크 범위 파악, 활성화된 머신 식벼, 개방 포트 탐색, 서비스 식별, `말테고(maltego)`를 이용한 위협 평가, 네트워크 매핑 등이 있다.
 
+[해킹을 위한 사전준비, Port Scan](https://youtu.be/BFbXZIaQYxs){% include video id="BFbXZIaQYxs" provider="youtube" %}
+
 ### 정보 수집방법
 
 - 배너 그래빙(banner grabbing): 서버 응답을 통해 정보를 수집하는 방법. 구글 크롬 네트워크 탭에서 확인 가능하다
