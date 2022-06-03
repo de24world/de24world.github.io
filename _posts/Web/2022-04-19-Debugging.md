@@ -24,7 +24,9 @@ sidebar:
 
 ## 브라우저(예:크롬)에서의 디버깅
 
-- [JavaScript 디버깅 - DOM 객체, 함수 오류 검토](https://youtu.be/STivPZTyNmc){% include video id="STivPZTyNmc" provider="youtube" %}
+[천천히 읽어 보는 Chrome 개발자 도구 설명서](https://rlxuc0ppd.toastcdn.net/presentation/%5BNHN%20FORWARD%202020%5D%EC%B2%9C%EC%B2%9C%ED%9E%88%20%EC%9D%BD%EC%96%B4%20%EB%B3%B4%EB%8A%94%20Chrome%20%EA%B0%9C%EB%B0%9C%EC%9E%90%20%EB%8F%84%EA%B5%AC%20%EC%84%A4%EB%AA%85%EC%84%9C.pdf)
+
+[JavaScript 디버깅 - DOM 객체, 함수 오류 검토](https://youtu.be/STivPZTyNmc){% include video id="STivPZTyNmc" provider="youtube" %}
 
 ## Visual Studio 에서 디버깅
 
