@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://de24world.github.io/sitemap.xml
