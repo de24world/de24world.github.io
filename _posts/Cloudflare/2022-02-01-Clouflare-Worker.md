@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Cloudflare Worker(클라우드플레어 3편)"
+title: "Cloudflare Worker"
 categories: Cloudflare
 tag:
   [
@@ -11,6 +11,7 @@ tag:
     클라우드플레어,
     Serverless,
     서버리스,
+    wrangler,
   ]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
@@ -27,6 +28,8 @@ Workers는 Cloudflare사의 서버리스(Serverless) 컴퓨팅 서비스로, 전
 
 <img src="/assets/images/Cloudflare/cloudflare-workers.png" />
 
+[Cloudflare Workers 소개](https://ryanking13.github.io/2020/07/26/introducing-cf-workers-1.html)
+
 ## Serverless (컴퓨팅)란?
 
 서버리스 컴퓨팅은 특정 서버에 코드를 올려놓고 요청을 처리하는 것이 아니라, 말 그대로 어떤 서버에 종속되지 않은(serverless) 코드를 배포하여 필요할 때마다 요청을 처리하는 기술이다.
@@ -39,6 +42,10 @@ Workers는 Cloudflare사의 서버리스(Serverless) 컴퓨팅 서비스로, 전
 
 - 개발 기간 단축: 대부분의 서버리스 서비스는 REST 엔드포인트처럼 동작하므로 HTTP 서버를 구성하거나 하는 시간적 비용을 줄일 수 있다. 또한 서버리스 코드는 태생적으로 ‘stateless’하기도 하므로(하지만 workers에서는 stateless가 아니긴 하다. :P) 프로그래머는 로직과 상태를 분리할 수 있게 된다
 
+[서버리스 컴퓨팅이란 무엇입니까? | 서버리스 정의](https://www.cloudflare.com/ko-kr/learning/serverless/what-is-serverless/)
+
+[서버리스는 서버가 없는걸까? 8분 개념 설명!](https://youtu.be/ufLmReluPww){% include video id="ufLmReluPww" provider="youtube" %}
+
 ## Cloudflare Workers 타사(AWS Lambda) 비교 장점
 
 - 타사에 비해 폭넓은 에지 수: Cloudflare의 데이터센터가 더 많으니 전세계 범위에서 평균적인 레이턴시가 더 적다고 주장한다. (자기 나라에 있을 확률이 높으니까)
@@ -47,12 +54,18 @@ Workers는 Cloudflare사의 서버리스(Serverless) 컴퓨팅 서비스로, 전
 
 - Rust 공식 지원
 
+## 설치 및 사용법
+
+Cloudflare의 Workers 서비스는 `wrangler`라는 npm package를 설치해서 사용해야한다
+[Cloudflare Workers로 서버리스 앱 개발하기](https://ryanking13.github.io/2020/07/26/introducing-cf-workers-2.html)
+
 #### 참고 영상
 
 - [How Cloudflare Workers delivers serverless computing](https://youtu.be/42E8DWdZgYc){% include video id="42E8DWdZgYc" provider="youtube" %}
 
 #### 참조 문서 및 사이트
 
+- [Cloudflare Workers documentation](https://developers.cloudflare.com/workers/)
 - [Cloudflare Workers Rust SDK 사용기](https://blog.cro.sh/posts/cloudflare-workers-rust/)
 - [Cloudflare Workers — 서버리스](https://bbirec.medium.com/cloudflare-workers-%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4-4de0d9d6aeb2)
 

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Cloudflare 동작원리(클라우드플레어 1편)"
+title: "Cloudflare란"
 categories: Cloudflare
 tag: [Cloudflare, CDN, edge, 클라우드플레어, static content]
 toc: true # table of content 콘텐츠 목록
@@ -61,6 +61,7 @@ sidebar:
 #### 참조 문서 및 사이트
 
 - [클라우드플레어(Cloudflare) 동작 원리](https://www.letmecompile.com/how-cloudflare-works/)
+- [클라우드플레어(Cloudflare) 서비스 문서](https://developers.cloudflare.com/)
 
 [상단으로](#svg-란){: .btn .btn--primary}
 [푸샤 깃허브 이동](https://github.com/de24world){: .btn .btn--info}
