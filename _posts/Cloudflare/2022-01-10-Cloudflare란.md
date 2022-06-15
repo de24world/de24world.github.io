@@ -47,6 +47,10 @@ sidebar:
 
 - 웹이 클라우드플레어에 의존적이게 되는데, 2019년에 클라우드 플레어가 18분 정도 서버 다운된적이 있어, Cloudflare를 사용하고 있는 전세계의 많은 웹들이 다운된 적이 있다.
 
+## 클라우드 플레어 타사 서비스와 비교
+
+[cloudflare pages vs firebase](https://bejamas.io/compare/cloudflare-pages-vs-firebase/)
+
 <div class="notice--success">
 <h2>요약</h2>
 <ul>
@@ -62,6 +66,7 @@ sidebar:
 
 - [클라우드플레어(Cloudflare) 동작 원리](https://www.letmecompile.com/how-cloudflare-works/)
 - [클라우드플레어(Cloudflare) 서비스 문서](https://developers.cloudflare.com/)
+- [클라우드 플레어 강좌](https://egghead.io/q?q=cloudflare)
 
 [상단으로](#svg-란){: .btn .btn--primary}
 [푸샤 깃허브 이동](https://github.com/de24world){: .btn .btn--info}

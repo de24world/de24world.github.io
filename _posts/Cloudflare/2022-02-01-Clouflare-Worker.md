@@ -68,6 +68,7 @@ Cloudflare의 Workers 서비스는 `wrangler`라는 npm package를 설치해서 
 - [Cloudflare Workers documentation](https://developers.cloudflare.com/workers/)
 - [Cloudflare Workers Rust SDK 사용기](https://blog.cro.sh/posts/cloudflare-workers-rust/)
 - [Cloudflare Workers — 서버리스](https://bbirec.medium.com/cloudflare-workers-%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4-4de0d9d6aeb2)
+- [무료 강의 - Build a Serverless API with Cloudflare Workers](https://egghead.io/courses/build-a-serverless-api-with-cloudflare-workers-d67ca551)
 
 [상단으로](#svg-란){: .btn .btn--primary}
 [푸샤 깃허브 이동](https://github.com/de24world){: .btn .btn--info}
