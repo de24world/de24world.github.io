@@ -29,6 +29,7 @@ GitHub Actions는 빌드, 테스트 및 배포 파이프라인을 자동화할 �
 
 #### 참고 영상
 
+- [제발 깃허브 액션🔥 모르는 개발자 없게해 주세요 🙏](https://youtu.be/iLqGzEkusIw){% include video id="iLqGzEkusIw" provider="youtube" %}
 - [GitHub Actions - Supercharge your GitHub Flow](https://youtu.be/cP0I9w2coGU){% include video id="cP0I9w2coGU" provider="youtube" %}
 - [github.com - action](https://youtu.be/uBOdEEzjxzE){% include video id="uBOdEEzjxzE" provider="youtube" %}
 
