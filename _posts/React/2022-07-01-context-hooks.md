@@ -13,9 +13,9 @@ sidebar:
 **[공지사항]** [푸샤 깃허브 블로그 업데이트 사항](https://github.com/de24world/de24world.github.io)
 {: .notice--info}
 
-# custom Hook
+# custom Hook(커스텀 훅)?
 
-단일
+Custom Hook은 다른 JavaScript 함수 간에 로직을 공유하고 싶을 때 우리가 직접 생성하는 JavaScript 함수입니다. 앱의 여러 부분에서 일부 코드를 재사용할 수 있습니다.
 
 <img src="/assets/images/Git/mono-repo.jpeg" />
 
@@ -26,7 +26,7 @@ sidebar:
 
 [React JS #13 Custom Hooks - 초보자를 위한 리액트 강좌](https://youtu.be/B70lI2PvRnA){% include video id="B70lI2PvRnA" provider="youtube" %}
 
-## 규칙
+## 규칙(방법)
 
 - 파일 이름 및 함수명은(네이밍) `use...`로 하자. 예 : useFetch.js
 
