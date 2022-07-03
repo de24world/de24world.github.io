@@ -1,6 +1,5 @@
 ---
-# layout: single
-comments: true
+layout: single
 title: "custom Hooks과 (use)Context(Provider)"
 categories: React
 tag:
