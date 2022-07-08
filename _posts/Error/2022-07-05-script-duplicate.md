@@ -1,9 +1,22 @@
 ---
 layout: single
-title: "외부 script 중복 문제 window reset으로 해결하기"
+title: "외부 script 중복 생성 문제 window reset으로 해결하기"
 categories: Error
 tag:
-  [script, 중복, error, 에러, reset, 리셋, window, 스크립트, 윈도우, flixmedia]
+  [
+    script,
+    중복,
+    error,
+    에러,
+    reset,
+    리셋,
+    window,
+    스크립트,
+    윈도우,
+    flixmedia,
+    리액트,
+    react,
+  ]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
 sidebar:
