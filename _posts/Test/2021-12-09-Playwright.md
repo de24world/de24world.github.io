@@ -189,6 +189,7 @@ export async function closeConsentAction(page: Page) {
 #### 참고 영상
 
 - [Playwright vs Cypress](https://youtu.be/idX9hSW0MY4){% include video id="idX9hSW0MY4" provider="youtube" %}
+- [Cypress vs. Playwright: Let the Code Speak](https://youtu.be/fncL63KRA-0){% include video id="fncL63KRA-0" provider="youtube" %}
 
 #### 참조 문서 및 사이트
 
