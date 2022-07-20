@@ -39,6 +39,7 @@ sidebar:
 #### 참고 영상
 
 - [06. 구글 태그 매니저](https://youtu.be/tplvhWBGV_Q){% include video id="tplvhWBGV_Q" provider="youtube" %}
+- [구글 애널리틱스4 (GA4) 강의 5. 이벤트 : GA4 GTM 이벤트 태깅하기. 플러스제로](https://youtu.be/hWrmkJZt1Sk){% include video id="hWrmkJZt1Sk" provider="youtube" %}
 
 #### 참조 문서 및 사이트
 
