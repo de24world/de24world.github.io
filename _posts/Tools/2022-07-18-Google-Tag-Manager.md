@@ -2,7 +2,16 @@
 layout: single
 title: "구글 태그 매니저(GTM)"
 categories: Tools
-tag: [GTM, Google Tag Manager, GTA, GA, Google Analytic, 구글 태그 매니저]
+tag:
+  [
+    GTM,
+    Google Tag Manager,
+    GTA,
+    GA,
+    Google Analytic,
+    구글 태그 매니저,
+    Google Tag Assistant,
+  ]
 toc: true # table of content 콘텐츠 목록
 author_profile: false
 sidebar:
@@ -26,6 +35,21 @@ sidebar:
 ## data Layer
 
 <img src="/assets/images/Tools/tag-manager-server-share.png" />
+
+## 사용법 및 확인법
+
+### console.log로 확인하기
+
+console.log에서 `dataLayer`를 입력하면 값을 손쉽게 확인할 수 있다.
+<img src="/assets/images/Tools/data-layer-developer-tools-console.png" />
+
+### Chrome Extension - Google Tag Assistant 으로 확인하기
+
+- 다운로드
+  [유용한 도구 Google Tag Assistant 알아보기](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=opensellerbiz&logNo=221494015560)
+
+- 사용법
+  [Tag Assistant Legacy (by Google)](https://chrome.google.com/webstore/detail/tag-assistant-legacy-by-g/kejbdjndbnbjgmefkgdddjlbokphdefk?hl=ko)
 
 <div class="notice--success">
 <h2>요약</h2>
